@@ -1,31 +1,19 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  Sheridan GDSC Website
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Install Node.js**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    Download [here](https://nodejs.org/en/download/).
+    
+3.  **Install Dependencies**
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    Run `npm install`
+5.  **Start developing.**
 
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+    Run `npm run develop`
 
 3.  **Open the code and start customizing!**
 
