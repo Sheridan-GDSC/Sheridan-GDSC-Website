@@ -6,11 +6,12 @@
 
 1.  **Install Node.js**
 
-    Download [here](https://nodejs.org/en/download/).
-    
-3.  **Install Dependencies**
+    Run `node -v` to check if Nodejs is installed. If it is not, then download it [here](https://nodejs.org/en/download/).
 
-    Run `npm install`
+3.  **Install Dependencies**
+    
+    Once the repository is cloned locally, run `npm install` inside the parent directory.
+    
 5.  **Start developing.**
 
     Run `npm run develop`
@@ -34,9 +35,3 @@
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
