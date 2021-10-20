@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@font-face {
+    font-family: "Google Sans";
+    src: url(../../../../static/fonts/GoogleSans-Regular-v1.27.ttf);
+}
+
+* {
+    font-family: "Google Sans";
+    font-size: 25px;
+}
+
+.outerDiv {
+    padding: 23px;
+    display: grid;
+    grid-template-columns: 1.65fr 5fr 8fr;
+    gap: 10px;
+}
+
+.outerDiv img{
+    width: 80px;
+}
+
+.icon {
+    grid-column: 1/2;
+    margin: auto 37px;
+}
+
+.nav-bar {
+    grid-column: 2/3;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.nav-bar li {
+    margin: 10px;
+    list-style-type:none;
+}
+
+@media screen and (max-width:650px) {
+
+    *{
+        font-size: 22px;
+    }
+
+    .outerDiv{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding:0px;
+    }
+
+    .outerDiv .icon{
+        margin: auto;
+    }
+
+    .nav-bar ul {
+        gap: 5px;
+    }
+
+    .nav-bar ul,li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        width: 33%;
+        text-align: center;
+    }
+
+};
+
