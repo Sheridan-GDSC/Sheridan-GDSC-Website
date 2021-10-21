@@ -5,22 +5,18 @@ import "./NavBar.css"
 const NavBar = () => {
     return (
         <header>
-            <div className="header outerDiv">
+            <div className="outerDiv">
                 <div className="icon">
                     <img src={Icon}></img>
                 </div>
-                <div className="nav-bar">
-                    <nav>
-                        <ul>
-                            <li><a>Events</a></li>
-                            <li><a>About</a></li>
-                            <li><a className="contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav className="nav-bar">
+                    <ul>
+                        <li><a>Events</a></li>
+                        <li><a>About</a></li>
+                        <li><a className="contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-
-
         </header>
 
     )
