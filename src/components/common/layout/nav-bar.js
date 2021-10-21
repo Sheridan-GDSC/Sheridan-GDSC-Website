@@ -13,12 +13,11 @@ const NavBar = () => {
                     <ul>
                         <li><a>Events</a></li>
                         <li><a>About</a></li>
-                        <li><a className="contact">Contact</a></li>
+                        <li><a className="contact">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-
     )
 }
 
