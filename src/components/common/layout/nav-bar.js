@@ -16,6 +16,7 @@ const NavBar = () => {
                         <li><a className="contact">Contact Us</a></li>
                     </ul>
                 </nav>
+                <button class="join">JOIN</button>
             </div>
         </header>
     )
