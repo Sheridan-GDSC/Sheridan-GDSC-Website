@@ -2,16 +2,17 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     background-color: blue;
 }
 
 .outerDiv {
     padding: 23px;
     display: grid;
-    grid-template-columns: 2.2fr 5fr 8fr;
+    grid-template-columns: 7.4fr 6fr 4fr;
     gap: 10px;
     background-color: white;
+    position: sticky;
 }
 
 .outerDiv * {
@@ -19,12 +20,12 @@
 }
 
 .outerDiv img{
-    width: 80px;
+    width: 60px;
 }
 
 .icon {
     grid-column: 1/2;
-    margin: auto 50px;
+    margin: auto 80px;
 }
 
 .nav-bar {
@@ -42,6 +43,14 @@
     list-style-type:none;
     color: #6f6f6f;
 }
+
+.nav-bar a:hover {
+    cursor: pointer;
+}
+
+/* .nav-bar li:hover {
+    border-bottom: solid #6f6f6f 2px;
+} */
 
 
 @media screen and (max-width:650px) {
