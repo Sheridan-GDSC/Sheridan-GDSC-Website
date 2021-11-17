@@ -7,7 +7,7 @@
 }
 
 .outerDiv {
-    padding: 23px;
+    padding: 15px;
     display: grid;
     grid-template-columns: 7.4fr 6fr 4fr;
     gap: 10px;
