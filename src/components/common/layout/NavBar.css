@@ -3,7 +3,6 @@
 * {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    background-color: blue;
     margin: 0px;
 }
 
@@ -79,36 +78,50 @@ header {
     cursor: pointer;
 }
 
+.mobile_hamburger_menu {
+    display:none;
+}
 
-@media screen and (max-width:650px) {
+#hidden_menu {
+    display: none;
+}
+
+@media screen and (max-width:865px) {
 
     *{
         font-size: 22px;
     }
 
-    .outerDiv{
+    .icon {
+        margin-left:25px;
         display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding:0px;
+        justify-content: center;
+        
     }
 
-    .outerDiv .icon{
-        margin: auto;
+    .outerDiv {
+        height: 80px;
     }
 
-    .nav-bar ul {
-        gap: 5px;
-    }
-
-    .nav-bar ul,li {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .nav-bar li {
-        width: 33%;
+    .mobile_hamburger_menu {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        display: flex;
         text-align: center;
+        justify-content: center;
+    }
+
+    .mobile_hamburger_menu img {
+        margin: auto;
+        width: 50px;
+    }
+
+    .nav-bar ul, .join {
+        display:none;
+    }
+
+    .show{
+        display: inline;
     }
 
 };
