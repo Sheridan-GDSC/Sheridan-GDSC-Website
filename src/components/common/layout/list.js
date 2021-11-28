@@ -1,15 +1,45 @@
 import React from "react";
+import "./list.css";
 
-const List = ({items}) => {
+const List = () => {
+    const listItems = [
+        {
+            label: "Home",
+            source: '/'
+        },
+        {
+            label: "Events",
+            source: '/events'
+        },
+        {
+            label: "About",
+            source: '/about'
+        },
+        {
+            label: "Contact Us",
+            source: '/contact'
+        }
+    ];
+
+    // // function createItem (item) {
+    // //     return (
+    //     <li>
+    //     <a src={item.source}>{item.label}</a>
+    // </li>
+    // //     )
+    // // }
+
+
+
     return (
-            <div class="list">
-                <p>Hello</p>
+            <div className="list">
                 <ul>
                 {
-                    items.forEach(item => {
-                        <li><a src={item.source}>{item.label}</a></li>
-                        console.log({item});
-                    })
+                    listItems.map(item =>
+                        <li>
+                            <a src={item.source}>{item.label}</a>
+                        </li>
+                    )
                 }
                 </ul>
             </div>

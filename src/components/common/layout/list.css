@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+.list {
+    background-color:blue;
+    height: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color:black;
+    width: 100px;
+}

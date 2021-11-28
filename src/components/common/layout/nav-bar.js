@@ -6,24 +6,6 @@ import "./NavBar.css"
 
 const NavBar = () => {
 
-    let listItems = [
-            {
-                label: "Home",
-                source: '/'
-            },
-            {
-                label: "Events",
-                source: '/events'
-            },
-            {
-                label: "Abour",
-                source: '/about'
-            },
-            {
-                label: "Contact Us",
-                source: '/contact'
-            }
-        ]
 
     function toggleMobileMenu  () {
         console.log("clicked");
@@ -54,7 +36,7 @@ const NavBar = () => {
                     <img src={Hamburger} onClick={toggleMobileMenu}></img>
                 </div>
                 <div id="hidden_menu">
-                    <List items={listItems}></List>
+                    <List></List>
                 </div>
             </div>
         </header>
