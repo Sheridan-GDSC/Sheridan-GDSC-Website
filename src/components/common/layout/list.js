@@ -29,14 +29,12 @@ const List = () => {
     // //     )
     // // }
 
-
-
     return (
             <div className="list">
-                <ul>
+                <ul className="listItemUL">
                 {
                     listItems.map(item =>
-                        <li>
+                        <li className="listItemLI">
                             <a src={item.source}>{item.label}</a>
                         </li>
                     )

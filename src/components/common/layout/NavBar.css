@@ -13,7 +13,7 @@ header {
 }
 
 .outerDiv {
-    padding: 15px;
+    /* padding: 15px; */
     display: grid;
     grid-template-columns: 7.4fr 6fr 4fr;
     gap: 10px;
@@ -82,13 +82,9 @@ header {
     display:none;
 }
 
-#hidden_menu {
-    display: none;
-}
-
 @media screen and (max-width:865px) {
 
-    *{
+    *{  /* This may affect other components when resizing */
         font-size: 22px;
     }
 
@@ -101,6 +97,8 @@ header {
 
     .outerDiv {
         height: 80px;
+        position: absolute;
+        width:94vw;
     }
 
     .mobile_hamburger_menu {
@@ -120,8 +118,23 @@ header {
         display:none;
     }
 
-    .show{
-        display: inline;
+    .hidden_menu {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        animation: popin 0.5s ease forwards;
+        padding: 16px;
+        background-color: #5A8BEA;
+    }
+
+    @keyframes popin {
+        /* 0%{}
+        70%{transform: translateX(+20vw + 270px)}
+        100%{ } */
+    }
+
+    #cancel_icn img {
+        width: 20px;
     }
 
 };
