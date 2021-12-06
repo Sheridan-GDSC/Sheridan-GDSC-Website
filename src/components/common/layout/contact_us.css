@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+}
+
+.cu {
+    text-align: center;
+}
+
+.cu-heading {
+    font-size: 50px;
+    color: #4892EB;
+    margin-top: 105px;
+}
+
+.cu-desc {
+    width: 40%;
+    margin: 63px auto;
+    font-size: 20px;
+    color: #797D81;
+}
