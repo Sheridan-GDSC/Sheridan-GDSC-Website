@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0px;
+}
+
+/* Change names */
+header {
+    position: sticky;
+    top: 0;
+}
+
+.outerDiv {
+    /* padding: 15px; */
+    display: grid;
+    grid-template-columns: 7.4fr 6fr 4fr;
+    gap: 10px;
+    background-color: white;
+}
+
+.outerDiv * {
+    background-color: white;
+}
+
+.outerDiv img{
+    width: 60px;
+}
+
+.icon {
+    grid-column: 1/2;
+    margin: auto 80px;
+}
+
+.nav-bar {
+    grid-column: 2/3;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.nav-bar li {
+    margin: 10px;
+    list-style-type:none;
+    color: #6f6f6f;
+}
+
+.nav-bar a:hover {
+    cursor: pointer;
+}
+
+.test {
+    height: 150vh;
+    background-color: yellow;
+}
+
+/* .nav-bar li:hover {
+    border-bottom: solid #6f6f6f 2px;
+} */
+
+.join {
+    grid-column: 3/4; 
+    width: 135px;
+    margin: auto 95px;
+    background-color: #5A8BEA;
+    border: 0px;
+    height: 50px;
+    color:white;
+    border-radius: 30px;
+    box-shadow: 0px 3px 3px #00000029;
+}
+
+.join:hover {
+    cursor: pointer;
+}
+
+.mobile_hamburger_menu {
+    display:none;
+}
+
+@media screen and (max-width:865px) {
+
+    *{  /* This may affect other components when resizing */
+        font-size: 22px;
+    }
+
+    .icon {
+        margin-left:25px;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .outerDiv {
+        height: 80px;
+        position: absolute;
+        width:94vw;
+    }
+
+    .mobile_hamburger_menu {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .mobile_hamburger_menu img {
+        margin: auto;
+        width: 50px;
+    }
+
+    .nav-bar ul, .join {
+        display:none;
+    }
+
+    .hidden_menu {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        animation: popin 0.5s ease forwards;
+        padding: 16px;
+        background-color: #5A8BEA;
+    }
+
+    @keyframes popin {
+        /* 0%{}
+        70%{transform: translateX(+20vw + 270px)}
+        100%{ } */
+    }
+
+    #cancel_icn img {
+        width: 20px;
+    }
+
+};
+

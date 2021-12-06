@@ -11,8 +11,11 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-source-filesystem","gatsby-plugin-google-gtag",
       options: {
+        trackingId: "G-D9C960VDH8", // Google Analytics
+        head = true;
+        anonymize: true,
         name: "images",
         path: "./static/images/",
       },
