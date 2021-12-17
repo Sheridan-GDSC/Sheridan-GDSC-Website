@@ -3,6 +3,7 @@ import { useState } from "react"
 import Icon from "../../../../static/images/icon.png"
 import Cancel from "../../../../public/images/icn_Cancel.png"
 import Hamburger from "../../../../public/images/hamburger_menu.png"
+import WhiteLogo from "../../../../static/images/white_logo.png"
 import List from "./list.js"
 import "./NavBar.css"
 
@@ -15,7 +16,7 @@ const NavBar = () => {
     }
 
     return (
-        <header>
+        <header className="nav-bar-header">
             <div className="outerDiv">
                 <div className="icon">
                     <img src={Icon}></img>
@@ -39,7 +40,14 @@ const NavBar = () => {
                     <div id="cancel_icn">
                         <img src={Cancel} onClick={toggleMobileMenu}></img>
                     </div>
+                    <div id="sher_brand_icn">
+                        <img src={WhiteLogo}></img>
+                        <label>Sheridan</label>
+                    </div>
                     <List></List>
+                    <div>
+                        
+                    </div>
                 </div>
                 : ""                
             }
