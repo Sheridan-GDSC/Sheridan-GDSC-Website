@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 
-* {
+.nav-bar-header > * {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     margin: 0px;
-}
-
-/* Change names */
-header {
+    padding: 0px;
     position: sticky;
     top: 0;
 }
+
+/* Change names */
 
 .outerDiv {
     /* padding: 15px; */
@@ -18,9 +17,10 @@ header {
     grid-template-columns: 7.4fr 6fr 4fr;
     gap: 10px;
     background-color: white;
+    margin: 0px;
 }
 
-.outerDiv * {
+.outerDiv > * {
     background-color: white;
 }
 
@@ -53,11 +53,6 @@ header {
     cursor: pointer;
 }
 
-.test {
-    height: 150vh;
-    background-color: yellow;
-}
-
 /* .nav-bar li:hover {
     border-bottom: solid #6f6f6f 2px;
 } */
@@ -67,11 +62,15 @@ header {
     width: 135px;
     margin: auto 95px;
     background-color: #5A8BEA;
+    font-size: 20px;
+    font-weight: lighter;
     border: 0px;
     height: 50px;
     color:white;
     border-radius: 30px;
     box-shadow: 0px 3px 3px #00000029;
+    letter-spacing: var(--unnamed-character-spacing-0-4);
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/37px Poppins;
 }
 
 .join:hover {
@@ -82,9 +81,13 @@ header {
     display:none;
 }
 
+.hidden_menu {
+    display: none;
+}
+
 @media screen and (max-width:865px) {
 
-    *{  /* This may affect other components when resizing */
+    .nav-bar-header > *{  /* This may affect other components when resizing */
         font-size: 22px;
     }
 
@@ -92,7 +95,6 @@ header {
         margin-left:25px;
         display: flex;
         justify-content: center;
-        
     }
 
     .outerDiv {
@@ -119,12 +121,15 @@ header {
     }
 
     .hidden_menu {
+        display: inline;
         position: absolute;
         right: 0px;
         top: 0px;
         animation: popin 0.5s ease forwards;
         padding: 16px;
         background-color: #5A8BEA;
+        height: 100vh;
+        width: 57%;
     }
 
     @keyframes popin {
@@ -134,7 +139,26 @@ header {
     }
 
     #cancel_icn img {
-        width: 20px;
+        width: 25px;
+        margin: 14px;
+    }
+
+    #sher_brand_icn {
+        margin-top: 27px;
+        margin-bottom: 18px;
+        height: 50px;
+    }
+
+    #sher_brand_icn img {
+        width: 40px;
+        margin-right: 27px;
+        margin-left: 10px;
+    }
+
+    #sher_brand_icn label {
+        color: white;
+        text-align: center;
+        font-size: 25px;
     }
 
 };

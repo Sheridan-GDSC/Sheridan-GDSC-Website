@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 
-* {
-    font-family: 'Poppins', sans-serif;
+.cu > * {
     margin: 0px;
 }
 
 .cu {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border: 2px black solid;
 }
 
 .cu-heading {

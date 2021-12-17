@@ -21,14 +21,6 @@ const List = () => {
         }
     ];
 
-    // // function createItem (item) {
-    // //     return (
-    //     <li>
-    //     <a src={item.source}>{item.label}</a>
-    // </li>
-    // //     )
-    // // }
-
     return (
             <div className="list">
                 <ul className="listItemUL">
