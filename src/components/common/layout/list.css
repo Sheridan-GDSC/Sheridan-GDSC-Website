@@ -3,7 +3,7 @@
 .list {
     font-family: 'Poppins', sans-serif;
     color:white;
-    width: 63vw;
+    width: 55vw;
     text-align: left;
 }
 
@@ -19,6 +19,6 @@
     border-bottom: rgba(255, 255, 255, 0.3) solid 1px;
     height: 57px;
     line-height: 57px;
-    width: 80%;
+    width: 100%;
 }
 

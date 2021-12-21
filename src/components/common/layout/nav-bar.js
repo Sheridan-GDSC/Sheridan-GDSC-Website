@@ -1,19 +1,23 @@
 import React from "react"
 import { useState } from "react"
 import Icon from "../../../../static/images/icon.png"
-import Cancel from "../../../../public/images/icn_Cancel.png"
 import Hamburger from "../../../../public/images/hamburger_menu.png"
-import WhiteLogo from "../../../../static/images/white_logo.png"
-import List from "./list.js"
 import "./NavBar.css"
+import Cancel from "../../../../public/images/icn_Cancel.png"
+import WhiteLogo from "../../../../public/images/white_logo.png"
+import Socials from "./social/socials"
+import List from "./list.js"
 
 const NavBar = () => {
 
-    const [showMenu, setShowMenu] = useState(true);
+
+    const [showMenu, setShowMenu] = useState(false);
 
     function toggleMobileMenu  () {
         setShowMenu(!showMenu);
     }
+
+
 
     return (
         <header className="nav-bar-header">
@@ -30,7 +34,7 @@ const NavBar = () => {
                 </nav>
                 <button className="join">JOIN</button>
                 <div className="mobile_hamburger_menu">
-                    <img src={Hamburger} onClick={toggleMobileMenu}></img>
+                    <img src={Hamburger} id="mobile_hamburger_img" onClick={toggleMobileMenu}></img>
                 </div>
             </div>
             
@@ -45,9 +49,7 @@ const NavBar = () => {
                         <label>Sheridan</label>
                     </div>
                     <List></List>
-                    <div>
-                        
-                    </div>
+                    <Socials></Socials>
                 </div>
                 : ""                
             }

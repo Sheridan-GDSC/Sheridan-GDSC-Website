@@ -1,23 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 
-.nav-bar-header > * {
-    font-family: 'Poppins', sans-serif;
+.nav-bar-header  {
+    font-family: var(--main-font);
     font-size: 20px;
     margin: 0px;
     padding: 0px;
-    position: sticky;
+    position: absolute;
     top: 0;
 }
 
+
+
 /* Change names */
+
+.nav-bar-header {
+    position: sticky;
+}
+
 
 .outerDiv {
     /* padding: 15px; */
     display: grid;
-    grid-template-columns: 7.4fr 6fr 4fr;
+    grid-template-columns: 8fr 6fr 4fr;
     gap: 10px;
     background-color: white;
     margin: 0px;
+    position:sticky;
 }
 
 .outerDiv > * {
@@ -30,7 +38,7 @@
 
 .icon {
     grid-column: 1/2;
-    margin: auto 80px;
+    margin: auto 13%;
 }
 
 .nav-bar {
@@ -121,14 +129,16 @@
     }
 
     .hidden_menu {
-        display: inline;
-        position: absolute;
+        display: none;
+        flex-direction: column;
+        position: fixed;
         right: 0px;
         top: 0px;
-        animation: popin 0.5s ease forwards;
+        /* z-index: 100; */
         padding: 16px;
         background-color: #5A8BEA;
-        height: 100vh;
+        height: calc(100vh - 32px);
+        /* margin-right: 0px; */
         width: 57%;
     }
 
@@ -159,7 +169,7 @@
         color: white;
         text-align: center;
         font-size: 25px;
+        font-family:  var(--main-font);
     }
-
-};
+}
 
