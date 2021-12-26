@@ -7,6 +7,7 @@ import Cancel from "../../../../public/images/icn_Cancel.png"
 import WhiteLogo from "../../../../public/images/white_logo.png"
 import Socials from "./social/socials"
 import List from "./list.js"
+import Button from "../buttons/button"
 
 const NavBar = () => {
 
@@ -17,7 +18,9 @@ const NavBar = () => {
         setShowMenu(!showMenu);
     }
 
-
+		const onClickTest = () => {
+			console.log("join");
+		}
 
     return (
         <header className="nav-bar-header">
@@ -32,7 +35,7 @@ const NavBar = () => {
                         <li><a className="contact">Contact Us</a></li>
                     </ul>
                 </nav>
-                <button className="join">JOIN</button>
+								<Button className="join" text="JOIN" onClick={onClickTest} />
                 <div className="mobile_hamburger_menu">
                     <img src={Hamburger} id="mobile_hamburger_img" onClick={toggleMobileMenu}></img>
                 </div>
