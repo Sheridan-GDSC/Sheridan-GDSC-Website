@@ -53,8 +53,4 @@
 	.personalInputs {
 		grid-template-columns: 1fr;
 	}
-	/* 
-	.personIcon img {
-		max-width: 100px;
-	} */
 }
