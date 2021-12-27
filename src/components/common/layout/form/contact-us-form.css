@@ -1,6 +1,50 @@
 .contact_us_form_div {
-    border: red solid 2px;
-    width: 48%;
-    margin: auto;
-    padding: 60px 80px;
+	border: rgba(0, 0, 0, 0.1) solid 1px;
+	border-radius: 60px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	width: 48%;
+	margin: 20px auto;
+	padding: 60px 80px;
+	position: relative;
+}
+
+.personalInputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.personIcon {
+	max-width: 75px;
+}
+
+#womanTop {
+	position: absolute;
+	top: -165px;
+	left: -20px;
+}
+
+#manTop {
+	position: absolute;
+	top: -119px;
+	right: 100px;
+}
+
+#manBottom {
+	position: absolute;
+	bottom: -150px;
+	left: -75px;
+}
+
+#womanBottom {
+	position: absolute;
+	bottom: -140px;
+	right: -20px;
+}
+
+@media screen and (max-width: 865px) {
+	.personalInputs {
+		grid-template-columns: 1fr;
+	}
 }

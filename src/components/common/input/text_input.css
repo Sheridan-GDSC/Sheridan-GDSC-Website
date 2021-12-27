@@ -1,24 +1,39 @@
 .div-TI {
-    display: grid;
-    align-items: left;
-    width: 40%;
-    text-align: left;
+	display: grid;
+	text-align: left;
+	width: calc(90% - 20px * 2);
+	margin: 10px auto;
 }
 
 .ti-lbl {
-    grid-row: 1/2;
-    font-size: 18px;
+	grid-row: 1/2;
+	font-size: 18px;
 }
 
 .ti-input {
-    grid-row: 2/3;
-    margin: 18px auto;
-    font-size: 20px;
-    border: #E4EEFD solid 2px;
-    border-radius: 21px;
-    opacity: 1;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    height: 45px;
-    width: 100%;
-    padding-left: 20px;
+	grid-row: 2/3;
+	margin: 18px auto;
+	font-size: 20px;
+	border: #e4eefd solid 2px;
+	border-radius: 21px;
+	opacity: 1;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	height: 45px;
+	width: 100%;
+	padding: 0px 0px 0px 20px;
+}
+
+.ta-div {
+	width: 100%;
+	margin: 10px auto;
+}
+
+.text-area {
+	height: 200px;
+	width: 90%;
+	padding: 20px;
+}
+
+span {
+	color: #d75744;
 }

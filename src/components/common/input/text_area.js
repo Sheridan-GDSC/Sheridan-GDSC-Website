@@ -1,12 +1,21 @@
 import React from "react";
 import "../layout/list.js";
+import "./text_input.css"
 
-const TextArea = ({fieldName}) => {
+const TextArea = ({fieldName, isRequired}) => {
 
   return (
-    <div>
-      <label for={fieldName}>{fieldName}</label>
+    <div className="div-TI ta-div">
+      <label className="ti-lbl" for={fieldName}>{fieldName}
+					{
+						isRequired ?
+							<span>*</span>
+							:
+							""
+				}
+			</label>
       <textarea 
+				className="ti-input text-area"
         id={fieldName}
         name={fieldName}
         rows="10" cols="30"
