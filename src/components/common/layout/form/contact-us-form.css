@@ -1,6 +1,6 @@
 .contact_us_form_div {
 	border: rgba(0, 0, 0, 0.1) solid 1px;
-	border-radius: 60px;
+	border-radius: 55px;
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
@@ -10,41 +10,51 @@
 	position: relative;
 }
 
+.personIcon img {
+	max-width: 130px;
+}
+
 .personalInputs {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-.personIcon {
-	max-width: 75px;
-}
-
 #womanTop {
 	position: absolute;
-	top: -165px;
-	left: -20px;
+	top: -114px;
+	left: -15px;
 }
 
+#womanTop img {
+	width: 100px;
+}
 #manTop {
 	position: absolute;
-	top: -119px;
-	right: 100px;
+	top: -92px;
+	right: 30px;
 }
 
 #manBottom {
 	position: absolute;
-	bottom: -150px;
-	left: -75px;
+	bottom: -100px;
+	left: -50px;
+}
+#manBottom img {
+	width: 100px;
 }
 
 #womanBottom {
 	position: absolute;
-	bottom: -140px;
-	right: -20px;
+	bottom: -78px;
+	right: -95px;
 }
 
 @media screen and (max-width: 865px) {
 	.personalInputs {
 		grid-template-columns: 1fr;
 	}
+	/* 
+	.personIcon img {
+		max-width: 100px;
+	} */
 }
