@@ -67,20 +67,22 @@
 	right: -95px;
 }
 #small_gear {
-	width: 90px;
+	width: 70px;
 	position: absolute;
 	bottom: 110px;
-	left: -140px;
+	left: -120px;
 }
 #large_gear {
+	width: 110px;
 	position: absolute;
 	bottom: 50px;
-	left: -270px;
+	left: -240px;
 }
 #large_ylw_gear {
+	width: 110px;
 	position: absolute;
-	top: 90px;
-	right: -230px;
+	top: 140px;
+	right: -190px;
 }
 @media screen and (max-width: 865px) {
 	.personalInputs {
