@@ -4,53 +4,145 @@
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
-	width: 48%;
+	width: calc(50% - 60px * 2);
 	margin: 20px auto;
-	padding: 60px 80px;
+	padding: 40px 60px;
 	position: relative;
+	background-color: white;
+	z-index: 50;
 }
 
-.personIcon img {
+.icons {
 	max-width: 130px;
 }
-
 .personalInputs {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		'fn email'
+		'ln subject'
+		'message message'
+		'message message'
+		'submit submit';
 }
 
+#firstName {
+	grid-area: fn;
+}
+#lastName {
+	grid-area: ln;
+}
+#email {
+	grid-area: email;
+}
+#subject {
+	grid-area: subject;
+}
+#message {
+	grid-area: message;
+}
+#submit {
+	grid-area: submit;
+}
 #womanTop {
+	width: 100px;
 	position: absolute;
 	top: -114px;
 	left: -15px;
-}
-
-#womanTop img {
-	width: 100px;
 }
 #manTop {
 	position: absolute;
 	top: -92px;
 	right: 30px;
 }
-
 #manBottom {
+	width: 100px;
 	position: absolute;
 	bottom: -100px;
 	left: -50px;
 }
-#manBottom img {
-	width: 100px;
-}
-
 #womanBottom {
 	position: absolute;
 	bottom: -78px;
 	right: -95px;
 }
-
+#small_gear {
+	width: 90px;
+	position: absolute;
+	bottom: 110px;
+	left: -140px;
+}
+#large_gear {
+	position: absolute;
+	bottom: 50px;
+	left: -270px;
+}
+#large_ylw_gear {
+	position: absolute;
+	top: 90px;
+	right: -230px;
+}
 @media screen and (max-width: 865px) {
 	.personalInputs {
 		grid-template-columns: 1fr;
+		grid-template-areas:
+			'fn'
+			'ln'
+			'email'
+			'subject'
+			'message'
+			'message'
+			'submit';
+	}
+	.ti-input {
+		height: 30px;
+	}
+	.contact_us_form_div {
+		border-radius: 25px;
+		padding: 40px 40px;
+		width: calc(70% - 30px * 2);
+	}
+	#womanTop {
+		top: -80px;
+		left: -12px;
+		width: 70px;
+	}
+	#manTop {
+		width: 90px;
+		top: -64px;
+		right: 5px;
+	}
+	#manBottom {
+		width: 70px;
+		bottom: -60px;
+		left: -45px;
+	}
+	#womanBottom {
+		bottom: -60px;
+		right: -65px;
+		width: 90px;
 	}
 }
+
+/* @media screen and (max-width: 520px) {
+#womanTop {
+		top: -57px;
+		left: -8px;
+		width: 50px;
+	}
+	#manTop {
+		width: 60px;
+		top: -43px;
+		right: 10px;
+	}
+	#manBottom {
+		width: 50px;
+		bottom: -45px;
+		left: -30px;
+	}
+	#womanBottom {
+		bottom: -40px;
+		right: -40px;
+		width: 60px;
+	} 
+}*/

@@ -2,7 +2,7 @@
 
 .nav-bar-header {
 	font-family: var(--main-font);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	margin: 0px;
 	padding: 0px;
 	position: absolute;
@@ -72,11 +72,6 @@
 }
 
 @media screen and (max-width: 865px) {
-	.nav-bar-header > * {
-		/* This may affect other components when resizing */
-		/* font-size: 22px; */
-	}
-
 	.icon {
 		margin-left: 25px;
 		display: flex;
@@ -85,8 +80,6 @@
 
 	.outerDiv {
 		height: 80px;
-		/* position: absolute;	 */
-		width: 94vw;
 	}
 
 	.mobile_hamburger_menu {
