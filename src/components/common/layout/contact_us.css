@@ -59,6 +59,7 @@
 	position: absolute;
 	bottom: -450px;
 	left: 0px;
+	z-index: 100;
 }
 @media screen and (max-width: 865px) {
 	.cu-desc {
