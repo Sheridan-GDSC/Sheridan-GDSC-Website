@@ -125,11 +125,11 @@
         width: 57%;
 	}
 
-	.menu_appear {
+	#menu_appear {
 		animation: slide-in 0.5s backwards;
 	}
 	
-	.menu_disappear {
+	#menu_disappear {
 		animation: slide-out 0.7s forwards; 
 	}
 
@@ -165,5 +165,14 @@
 		text-align: center;
 		font-size: 25px;
 		font-family: var(--main-font);
+	}
+
+	#no-style {
+		display: none;
+	}
+
+	.hide_menu {
+		display:none;
+		animation: slide-in 0.5s backwards;
 	}
 }

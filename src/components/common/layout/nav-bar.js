@@ -8,24 +8,43 @@ import WhiteLogo from "../../../../public/images/white_logo.png"
 import Socials from "./social/socials"
 import List from "./list.js"
 import Button from "../buttons/button"
-import Hidden_Menu from "./app_menu/hidden_menu"
 
 const NavBar = () => {
 
 
     const [showMenu, setShowMenu] = useState(false);
+    const [style, setStyle] = useState("no_style");
+    const [clicked, setClicked] = useState(false);
+    const [menuType, setMenuType] = useState("hide_menu");
+    let hhh = "";
 
     function toggleMobileMenu  () {
+        changeClicked();
         setShowMenu(!showMenu);
+        setMenuType("hidden_menu")
+
+        
+            if (clicked && showMenu) {
+                hhh = "menu_appear";
+            } else if (clicked && !showMenu) {
+                hhh = "menu_disappear";
+            }
+
+            setStyle(hhh);
+            
     }
+    
+    function changeClicked () {
+        setClicked(true);
+        console.log(clicked);
+
+    }
+
+    
 
 		const onClickTest = () => {
 			console.log("join");
 		}
-
-        const slideIn = "slide-in 0.5s forwards";
-        const slideOut = "slide-out 0.5s forwards";
-        
 
     return (
         <header className="nav-bar-header">
@@ -42,11 +61,13 @@ const NavBar = () => {
                 </nav>
 								<Button className="join" text="JOIN" onClick={onClickTest} />
                 <div className="mobile_hamburger_menu">
-                    <img src={Hamburger} id="mobile_hamburger_img" onClick={toggleMobileMenu}></img>
+                    <img src={Hamburger} id="mobile_hamburger_img" onClick={toggleMobileMenu}>
+                        
+                    </img>
                 </div>
             </div>
             
-                <div className={`hidden_menu ${showMenu ? "menu_appear" : "menu_disappear"}`}>
+                <div className={menuType} id={style}>
                     <div id="cancel_icn">
                         <img src={Cancel} onClick={toggleMobileMenu}></img>
                     </div>
@@ -58,8 +79,6 @@ const NavBar = () => {
                     <Socials></Socials>
                 </div>
                 
-
-            
             
         </header>
     )
