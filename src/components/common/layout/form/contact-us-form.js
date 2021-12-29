@@ -29,9 +29,9 @@ const ContactUsForm = () => {
                 options={options}
             />
 					</div>
+          
             <TextArea id="message" fieldName="Message: " isRequired="true" />
 						<Button id="submit" text="Submit" onClick={formSubmit}/>
-
 
 						<div id="womanTop" className="personIcon">
               <img alt="cartoon girl typing on computer" src={WomanTop}></img>
