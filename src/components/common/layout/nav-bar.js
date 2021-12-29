@@ -8,6 +8,7 @@ import WhiteLogo from "../../../../public/images/white_logo.png"
 import Socials from "./social/socials"
 import List from "./list.js"
 import Button from "../buttons/button"
+import Hidden_Menu from "./app_menu/hidden_menu"
 
 const NavBar = () => {
 
@@ -21,6 +22,10 @@ const NavBar = () => {
 		const onClickTest = () => {
 			console.log("join");
 		}
+
+        const slideIn = "slide-in 0.5s forwards";
+        const slideOut = "slide-out 0.5s forwards";
+        
 
     return (
         <header className="nav-bar-header">
@@ -43,7 +48,7 @@ const NavBar = () => {
             
             { showMenu 
                 ?
-                <div className="hidden_menu">
+                <div className="hidden_menu menu_appear">
                     <div id="cancel_icn">
                         <img src={Cancel} onClick={toggleMobileMenu}></img>
                     </div>
@@ -54,7 +59,18 @@ const NavBar = () => {
                     <List></List>
                     <Socials></Socials>
                 </div>
-                : ""                
+                : 
+                <div className="hidden_menu menu_disappear">
+                <div id="cancel_icn">
+                    <img src={Cancel} onClick={toggleMobileMenu}></img>
+                </div>
+                <div id="sher_brand_icn">
+                    <img src={WhiteLogo}></img>
+                    <label>Sheridan</label>
+                </div>
+                <List></List>
+                <Socials></Socials>
+            </div>                
             }
             
         </header>

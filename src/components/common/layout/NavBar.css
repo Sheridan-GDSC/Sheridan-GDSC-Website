@@ -101,24 +101,47 @@
 	}
 
 	.hidden_menu {
-		display: none;
+		/* display: none;
 		flex-direction: column;
 		position: fixed;
 		right: 0px;
 		top: 0px;
 		/* z-index: 100; */
-		padding: 16px;
+		/* padding: 16px;
 		background-color: #5a8bea;
 		height: calc(100vh - 32px);
 		/* margin-right: 0px; */
-		width: 57%;
+		/* width: 57%; */ 
+		display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 1;
+        padding: 16px;
+        background-color: #5A8BEA;
+        height: calc(100vh - 32px);
+        margin-right: 0px;
+        width: 57%;
 	}
 
-	@keyframes popin {
-		/* 0%{}
-        70%{transform: translateX(+20vw + 270px)}
-        100%{ } */
+	.menu_appear {
+		animation: slide-in 0.5s backwards;
 	}
+	
+	.menu_disappear {
+		animation: slide-out 0.7s forwards; 
+	}
+
+	@keyframes slide-in {
+        0% { right: -100%; }
+        100% { right: 0; }
+    }
+
+    @keyframes slide-out {
+        0% { right: 0; }
+        100% { right: -100%; }
+    }
 
 	#cancel_icn img {
 		width: 25px;
