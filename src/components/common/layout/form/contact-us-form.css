@@ -25,7 +25,6 @@
 		'message message'
 		'submit submit';
 }
-
 #firstName {
 	grid-area: fn;
 }
@@ -50,14 +49,6 @@
 	top: -114px;
 	left: -15px;
 }
-<<<<<<< HEAD
-
-#womanTop img {
-	width: 100px;
-}
-
-=======
->>>>>>> 572cd462832d75b1de48a30c8a20986340c09ec2
 #manTop {
 	position: absolute;
 	top: -92px;
