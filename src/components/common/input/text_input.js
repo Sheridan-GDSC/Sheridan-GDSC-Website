@@ -2,10 +2,10 @@ import React from "react"
 import "./text_input.css"
 
 
-const TextInput = ({fieldName, isRequired}) => {
+const TextInput = ({id, fieldName, isRequired}) => {
 
     return (
-        <div className="div-TI">
+        <div id={id} className="div-TI">
             <label for={fieldName} className="ti-lbl">{fieldName}
 
                 {
