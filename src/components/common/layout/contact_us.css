@@ -7,10 +7,9 @@
 .cu {
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
-	/* border: 2px black solid; */
 	position: relative;
 	overflow: hidden;
-	padding: 150px 0px;
+	padding: 100px 0px 150px;
 }
 
 .cu-heading {
@@ -41,7 +40,7 @@
 #gCircleIcon {
 	width: 300px;
 	position: absolute;
-	top: 60px;
+	top: 10px;
 	right: -130px;
 	z-index: -1;
 }
@@ -50,17 +49,11 @@
 	width: 100%;
 	background-color: rgba(90, 139, 234, 0.08);
 	position: absolute;
-	top: 175px;
+	top: 125px;
 	left: 0;
+	z-index: -1;
 }
-#clouds {
-	max-width: 1000px;
-	height: 95%;
-	position: absolute;
-	bottom: -450px;
-	left: 0px;
-	z-index: 100;
-}
+
 @media screen and (max-width: 865px) {
 	.cu-desc {
 		font-size: 0.8rem;

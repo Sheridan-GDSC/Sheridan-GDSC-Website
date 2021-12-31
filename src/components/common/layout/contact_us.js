@@ -1,7 +1,6 @@
 import React from "react"
 import "./contact_us.css"
 import Form from "./form/contact-us-form.js"
-import Clouds from "../../../../static/images/clouds.png"
 import GCircle from "../../../../static/images/green_circle.png"
 
 const ContactUs = () => {
@@ -16,11 +15,8 @@ const ContactUs = () => {
             <Form></Form>
 
 					<img id="gCircleIcon" alt="green circle" src={GCircle} />
-					<div id="blueBack"><img alt="clouds" src={Clouds} id="clouds" /></div>
-	
-
+					<div id="blueBack"></div>
         </div>
-        
     )
 }
 

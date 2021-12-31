@@ -11,6 +11,8 @@ import WomanBottom from "../../../../../static/images/woman_carrying_picture.png
 import SmallGear from "../../../../../static/images/small_gear.png"
 import LargeGear from "../../../../../static/images/large_gear.png"
 import LargeYlwGear from "../../../../../static/images/large_yellow_gear.png"
+import Clouds from "../../../../../static/images/clouds.png"
+
 
 const ContactUsForm = () => {
     const options = ["1","2", "3"]
@@ -43,6 +45,7 @@ const ContactUsForm = () => {
               <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
               <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
               <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
+							<img alt="clouds" src={Clouds} id="clouds" />
         </div>
     )
 }

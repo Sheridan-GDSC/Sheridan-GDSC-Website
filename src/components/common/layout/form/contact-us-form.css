@@ -80,8 +80,15 @@
 #large_ylw_gear {
 	width: 110px;
 	position: absolute;
-	top: 140px;
+	top: 150px;
 	right: -190px;
+}
+#clouds {
+	max-width: 1200px;
+	position: absolute;
+	top: 60px;
+	left: -160px;
+	z-index: -1;
 }
 @media screen and (max-width: 865px) {
 	.personalInputs {
