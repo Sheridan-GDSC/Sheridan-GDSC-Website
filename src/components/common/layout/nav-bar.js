@@ -14,33 +14,31 @@ const NavBar = () => {
 
     const [showMenu, setShowMenu] = useState(false);
     const [style, setStyle] = useState("no_style");
-    const [clicked, setClicked] = useState(false);
-    const [menuType, setMenuType] = useState("hide_menu");
-    let hhh = "";
+		const [display, setDisplay] = useState("none");
+		const [right, setRight] = useState("-100%");		
+    let animationStyle = "";
 
-    function toggleMobileMenu  () {
-        changeClicked();
+    function toggleMobileMenu  (id) {
         setShowMenu(!showMenu);
-        setMenuType("hidden_menu")
-
-        
-            if (clicked && showMenu) {
-                hhh = "menu_appear";
-            } else if (clicked && !showMenu) {
-                hhh = "menu_disappear";
-            }
-
-            setStyle(hhh);
-            
-    }
-    
-    function changeClicked () {
-        setClicked(true);
-        console.log(clicked);
-
+				if(id == 'open_menu'){
+					animationStyle = "menu_appear";
+					setDisplay("flex");
+					setRight("100%");
+				} 
+				if (id == 'close_menu'){
+					animationStyle = "menu_disappear";
+					setRight("-100%");
+					setTimeout(()=>{
+						setDisplay("none");
+					},500)
+				}
+				setStyle(animationStyle);
     }
 
-    
+	   function displayNone(){
+			setDisplay("none");
+
+		}
 
 		const onClickTest = () => {
 			console.log("join");
@@ -61,15 +59,17 @@ const NavBar = () => {
                 </nav>
 								<Button className="join" text="JOIN" onClick={onClickTest} />
                 <div className="mobile_hamburger_menu">
-                    <img src={Hamburger} id="mobile_hamburger_img" onClick={toggleMobileMenu}>
-                        
+                    <img src={Hamburger} id="mobile_hamburger_img" onClick={() =>{
+											toggleMobileMenu('open_menu')}}>       
                     </img>
                 </div>
             </div>
             
-                <div className={menuType} id={style}>
+                <div className="hidden_menu" id={style} style={{display: display, right: right}}>
                     <div id="cancel_icn">
-                        <img src={Cancel} onClick={toggleMobileMenu}></img>
+                        <img src={Cancel} id="cancel"	onClick={() => {
+													toggleMobileMenu('close_menu');}}>
+												</img>
                     </div>
                     <div id="sher_brand_icn">
                         <img src={WhiteLogo}></img>
@@ -77,9 +77,7 @@ const NavBar = () => {
                     </div>
                     <List></List>
                     <Socials></Socials>
-                </div>
-                
-            
+                </div>  
         </header>
     )
 

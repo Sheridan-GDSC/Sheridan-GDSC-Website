@@ -101,47 +101,42 @@
 	}
 
 	.hidden_menu {
-		/* display: none;
 		flex-direction: column;
-		position: fixed;
-		right: 0px;
+		position: absolute;
 		top: 0px;
-		/* z-index: 100; */
-		/* padding: 16px;
+		z-index: 1;
+		padding: 16px;
 		background-color: #5a8bea;
 		height: calc(100vh - 32px);
-		/* margin-right: 0px; */
-		/* width: 57%; */ 
-		display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        z-index: 1;
-        padding: 16px;
-        background-color: #5A8BEA;
-        height: calc(100vh - 32px);
-        margin-right: 0px;
-        width: 57%;
+		margin-right: 0px;
+		width: 57%;
 	}
 
 	#menu_appear {
-		animation: slide-in 0.5s backwards;
+		animation: slide-in 0.5s forwards;
 	}
-	
+
 	#menu_disappear {
-		animation: slide-out 0.7s forwards; 
+		animation: slide-out 0.5s forwards;
 	}
 
 	@keyframes slide-in {
-        0% { right: -100%; }
-        100% { right: 0; }
-    }
+		0% {
+			right: -100%;
+		}
+		100% {
+			right: 0;
+		}
+	}
 
-    @keyframes slide-out {
-        0% { right: 0; }
-        100% { right: -100%; }
-    }
+	@keyframes slide-out {
+		0% {
+			right: 0;
+		}
+		100% {
+			right: -100%;
+		}
+	}
 
 	#cancel_icn img {
 		width: 25px;
@@ -169,10 +164,5 @@
 
 	#no-style {
 		display: none;
-	}
-
-	.hide_menu {
-		display:none;
-		animation: slide-in 0.5s backwards;
 	}
 }
