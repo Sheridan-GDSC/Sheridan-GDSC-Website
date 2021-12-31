@@ -9,27 +9,28 @@ const Socials = () => {
 
     const social_media = [{
         image: Twitter,
-        link: "https://www.linkedin.com"
+        link: "https://twitter.com/GDSC_Sheridan"
     },
     {
         image: Instagram,
-        link: "https://www.linkedin.com"
+        link: "https://www.instagram.com/gdsc_sheridan_college/"
     },
     {
         image: YouTube,
-        link: "https://www.linkedin.com"
+        link: "https://www.youtube.com/channel/UCDOufRCbSgVOnSBm_ySaRgg"
     },
     {
         image: LinkedIn,
-        link: "https://www.linkedin.com"
+        link: "https://www.linkedin.com/company/google-dsc-sheridan-college"
     }
+			// maybe discord too??
     ]
 
     return (
         <div className="div-socials">
             {
                 social_media.map((item, id ) => 
-                    <a key={id} href={item.link} className="sa-socials">
+                    <a target="_blank" key={id} href={item.link} className="sa-socials">
                      <img src={item.image} className="img-socials"></img>
                     </a>
                 )
