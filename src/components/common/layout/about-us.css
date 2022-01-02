@@ -1,0 +1,115 @@
+.AboutUs {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	overflow: hidden;
+	color: #797d81;
+	line-height: 1.8rem;
+}
+
+.au-heading {
+	font-size: 2rem;
+	color: #419c49;
+	margin: 50px auto;
+	margin-left: 45%;
+	width: 300px;
+	position: relative;
+}
+
+#au-underline {
+	height: 3px;
+	width: 250px;
+	position: absolute;
+	background-color: #419c49;
+	top: 40px;
+	left: 150px;
+}
+#branchLeaves {
+	max-width: 80%;
+	padding: 20px;
+}
+
+#greenIcon {
+	width: 300px;
+	position: absolute;
+	bottom: -185px;
+	right: -130px;
+	z-index: -1;
+}
+
+.au-grid {
+	display: grid;
+	width: 80%;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+}
+#info {
+	position: relative;
+	justify-content: space-between;
+}
+#au-blurb {
+	margin: 0 auto;
+}
+.green {
+	color: #419c49;
+}
+
+#subtitle {
+	padding-bottom: 20px;
+}
+
+.au-grid div {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#statContainer {
+	width: 90%;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30px 10px 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 865px) {
+	.AboutUs {
+		font-size: 0.9rem;
+	}
+	.au-grid {
+		width: 80%;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'info'
+			'extraDetail';
+	}
+	#info {
+		grid-area: info;
+	}
+	#extraDetail {
+		grid-area: extraDetail;
+	}
+	.au-heading {
+		margin-left: 10%;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	#au-underline {
+		width: 200px;
+		left: 50px;
+	}
+	#statContainer {
+		width: 100%;
+	}
+	#branchLeaves {
+		max-width: 75%;
+		left: calc(50% - 75% / 2);
+	}
+
+	#greenIcon {
+		width: 100px;
+		bottom: -40px;
+		right: -35px;
+	}
+}

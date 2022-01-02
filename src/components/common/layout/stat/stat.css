@@ -1,0 +1,16 @@
+.statNumber {
+	font-size: 1.5rem;
+	color: #419c49;
+	font-weight: 600;
+}
+.statName,
+.statNumber {
+	text-align: left;
+	margin: 5px;
+}
+
+@media screen and (max-width: 865px) {
+	.statName {
+		font-size: 0.8rem;
+	}
+}
