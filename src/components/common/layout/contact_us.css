@@ -27,7 +27,7 @@
 	position: absolute;
 	background-color: #4892eb;
 	top: 105px;
-	right: -70px;
+	left: 120px;
 }
 
 .cu-desc {
@@ -61,6 +61,10 @@
 	}
 	#cu-underline {
 		width: 200px;
-		right: -10px;
+	}
+	#gCircleIcon {
+		width: 100px;
+		top: -40px;
+		right: -35px;
 	}
 }
