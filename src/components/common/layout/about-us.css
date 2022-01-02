@@ -10,8 +10,6 @@
 .au-heading {
 	font-size: 2rem;
 	color: #419c49;
-	margin: 50px auto;
-	margin-left: 45%;
 	width: 300px;
 	position: relative;
 }
@@ -22,11 +20,18 @@
 	position: absolute;
 	background-color: #419c49;
 	top: 40px;
-	left: 150px;
+	left: 70px;
 }
+#redLoops {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	height: 100%;
+}
+
 #branchLeaves {
 	max-width: 80%;
-	padding: 20px;
+	margin: 50px auto;
 }
 
 #greenIcon {
@@ -42,10 +47,15 @@
 	width: 80%;
 	grid-template-columns: 1fr 1fr;
 	margin: 0 auto;
+	position: relative;
 }
 #info {
 	position: relative;
 	justify-content: space-between;
+}
+#extraDetail,
+#info {
+	height: 100vh;
 }
 #au-blurb {
 	margin: 0 auto;
@@ -78,7 +88,7 @@
 		font-size: 0.9rem;
 	}
 	.au-grid {
-		width: 80%;
+		width: 90%;
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			'info'
@@ -91,9 +101,11 @@
 		grid-area: extraDetail;
 	}
 	.au-heading {
-		margin-left: 10%;
 		font-size: 1.5rem;
 		text-align: left;
+	}
+	#subtitle {
+		font-size: 1rem;
 	}
 	#au-underline {
 		width: 200px;
@@ -101,12 +113,11 @@
 	}
 	#statContainer {
 		width: 100%;
+		padding: 10px 0px;
 	}
 	#branchLeaves {
 		max-width: 75%;
-		left: calc(50% - 75% / 2);
 	}
-
 	#greenIcon {
 		width: 100px;
 		bottom: -60px;
