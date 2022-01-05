@@ -25,8 +25,9 @@
 #redLoops {
 	position: absolute;
 	top: 0;
-	right: 0px;
+	right: 0;
 	height: 100%;
+	z-index: -10;
 }
 
 #branchLeaves {
@@ -56,7 +57,59 @@
 #extraDetail,
 #info {
 	height: 100vh;
+	padding: 0 15px;
 }
+
+#extraDetail {
+	padding: 50px 15px;
+	display: flex;
+	align-items: center;
+}
+
+#extraDetail .dbContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	height: 85%;
+	position: relative;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 #dbImgClouds {
+	max-height: 84%;
+	position: absolute;
+	top: -6%;
+	left: -100%;
+	z-index: -1;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 #dbImg1 {
+	/*max-height: 84%;*/
+	height: 100%;
+	position: relative;
+	top: 22.5%;
+	left: 10%;
+}
+
+#extraDetail .dbContainer #dbImg2 {
+	height: 84%;
+	position: relative;
+	top: 20%;
+	left: -26px;
+}
+
+#extraDetail .dbContainer #dbImg3 {
+	height: 85%;
+	position: relative;
+	top: 20%;
+	left: -15%;
+}
+
 #au-blurb {
 	margin: 0 auto;
 }
@@ -113,7 +166,7 @@
 	}
 	#statContainer {
 		width: 100%;
-		padding: 10px 0px;
+		padding: 10px 0;
 	}
 	#branchLeaves {
 		max-width: 75%;
