@@ -42,7 +42,7 @@ const AboutUs = () => {
 					{/* <img id="polygon" alt="small triangle shape" src={Polygon}></img> */}
 					<h1 className="au-heading">
 						About Us
-						{/*<div id="au-underline"></div>*/}
+						<div id="au-underline"></div>
 					</h1>
 
 					<h2 id="subtitle">Preaesent mattis metus sit amet <span className="green">justo mattis.</span></h2>
