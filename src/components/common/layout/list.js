@@ -26,7 +26,7 @@ const List = () => {
                 <ul className="listItemUL">
                 {
                     listItems.map(item =>
-                        <li className="listItemLI">
+                        <li key={item.source} className="listItemLI">
                             <a src={item.source}>{item.label}</a>
                         </li>
                     )

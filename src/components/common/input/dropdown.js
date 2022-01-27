@@ -9,7 +9,7 @@ const Dropdown = ({fieldName, options}) => {
       <select className="ti-input" id={fieldName} name={fieldName}>
         {
           options.map(option => 
-            <option value={option}>{option}</option>
+            <option key={option} value={option}>{option}</option>
           )
         }
       </select>
