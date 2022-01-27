@@ -23,6 +23,7 @@
 	gap: 10px;
 	background-color: white;
 	margin: 0px;
+	padding: 20px;
 	/* position: sticky; */
 }
 
@@ -41,6 +42,7 @@
 
 .nav-bar {
 	grid-column: 2/3;
+	font-size: 20px;
 }
 
 .nav-bar ul {
@@ -98,6 +100,10 @@
 	.nav-bar ul,
 	.join {
 		display: none;
+	}
+
+	.join {
+		font-size: 20px;
 	}
 
 	.hidden_menu {
