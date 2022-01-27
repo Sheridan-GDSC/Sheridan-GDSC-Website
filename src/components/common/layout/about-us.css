@@ -56,7 +56,6 @@
 }
 #extraDetail,
 #info {
-	height: 100vh;
 	padding: 0 15px;
 }
 
@@ -111,14 +110,14 @@
 }
 
 #au-blurb {
-	margin: 0 auto;
+	margin: 0px auto 20px;
 }
 .green {
 	color: #419c49;
 }
 
 #subtitle {
-	padding-bottom: 20px;
+	margin: 20px auto;
 }
 
 .au-grid div {

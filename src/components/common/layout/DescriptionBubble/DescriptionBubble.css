@@ -1,5 +1,5 @@
 .DescriptionBubble {
-	padding: 10px 25px 25px;
+	padding: 30px;
 	text-align: left;
 	background: rgba(255, 255, 255, 0.9) 0 0 no-repeat padding-box;
 	box-shadow: 0 3px 6px #00000029;
@@ -8,23 +8,33 @@
 	margin: 10px 0;
 }
 .descriptionTitle {
+	font-size: 32px;
 	color: #419c49;
-	margin: 10px 0;
+	margin: 10px 0 20px;
 }
 .descriptionText {
 	letter-spacing: -0.54px;
 	color: #797d81;
-	line-height: 1.1rem;
-	font-size: 0.7rem;
+	line-height: 1.4rem;
+	font-size: 18px;
 	margin: 0;
 }
 
 #db1 {
-	max-width: 260px;
+	max-width: 446px;
 }
 #db2 {
-	max-width: 350px;
+	max-width: 522px;
 }
 #db3 {
-	max-width: 280px;
+	max-width: 460px;
+}
+
+@media screen and (max-width: 865px) {
+	.descriptionText {
+		font-size: 0.8rem;
+	}
+	.descriptionTitle {
+		font-size: 18px;
+	}
 }
