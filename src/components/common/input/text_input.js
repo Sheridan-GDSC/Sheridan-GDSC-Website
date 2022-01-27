@@ -6,7 +6,7 @@ const TextInput = ({id, fieldName, isRequired}) => {
 
     return (
         <div id={id} className="div-TI">
-            <label for={fieldName} className="ti-lbl">{fieldName}
+            <label htmlFor={fieldName} className="ti-lbl">{fieldName}
 
                 {
                     isRequired ?

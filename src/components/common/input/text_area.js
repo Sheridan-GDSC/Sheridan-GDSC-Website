@@ -6,7 +6,7 @@ const TextArea = ({fieldName, isRequired}) => {
 
   return (
     <div className="div-TI ta-div">
-      <label className="ti-lbl" for={fieldName}>{fieldName}
+      <label className="ti-lbl" htmlFor={fieldName}>{fieldName}
 					{
 						isRequired ?
 							<span>*</span>
