@@ -8,8 +8,6 @@ import MainMegaphone from "../../../../static/images/man_megaphone.svg"
 import Clouds from "../../../../static/images/clouds.svg"
 import "./about-us.css"
 import DescriptionBubble from "./DescriptionBubble/DescriptionBubble";
-import RedLoop from "../../../../static/images/red_loops.png"
-// import Polygon from "../../../../static/images/polygon.png"
 
 const AboutUs = () => {
 
@@ -38,15 +36,13 @@ const AboutUs = () => {
 				</div>
 
 				<div id="info">
-					<img id="redLoops" alt="grey polygon shape" src={RedLoop} />
-					{/* <img id="polygon" alt="small triangle shape" src={Polygon}></img> */}
 					<h1 className="au-heading">
 						About Us
 						<div id="au-underline"></div>
 					</h1>
 
 					<h2 id="subtitle">Preaesent mattis metus sit amet <span className="green">justo mattis.</span></h2>
-					<p id="au-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quasi reiciendis libero! Provident cumque natus animi ipsam ratione, impedit quas laudantium iste blanditiis asperiores necessitatibus soluta odit dignissimos corporis assumenda optio cum eligendi minima ex molestiae aliquam amet magni. Placeat.</p>
+					<p id="au-blurb">Ex suscipit distinctio quidem, maiores optio vitae quas blanditiis ab ipsum temporibus omnis dolor fugiat inventore harum obcaecati possimus unde ut quaerat mollitia minus repellendus. Omnis dolorum suscipit vitae blanditiis, voluptatum dignissimos, tempore quo sint earum facilis id unde officia ab adipisci maiores explicabo perspiciatis modi nam corporis sit laborum? Officiis aut tempore accusantium voluptatibus, molestias libero facilis, quibusdam cum omnis numquam laudantium tenetur repellendus sequi, voluptatum doloremque temporibus illo illum tempora fugiat.</p>
 					<div id="statContainer">
 						<Stat number="56" name="Projects" />
 						<Stat number="128" name="Members" />
@@ -57,8 +53,6 @@ const AboutUs = () => {
 			</div>
 
 			<img id="greenIcon" alt="green circle" src={GCircle} />
-
-
 		</div>
 	)
 }
