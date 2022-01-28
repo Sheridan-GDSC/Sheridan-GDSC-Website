@@ -5,7 +5,7 @@ import GCircle from "../../../../static/images/green_circle.png"
 
 const ContactUs = () => {
     return (
-        <div className="cu">
+        <div id="contactUs" className="cu">
             <h1 className="cu-heading">
 							Get in touch
 							<div id="cu-underline"></div>

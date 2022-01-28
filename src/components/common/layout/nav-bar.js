@@ -40,9 +40,7 @@ const NavBar = () => {
 
 		}
 
-		const onClickTest = () => {
-			console.log("join");
-		}
+		const joinLink = "https://gdsc.community.dev/sheridan-college-trafalgar-road-campus-oakville/"
 
     return (
         <header className="nav-bar-header">
@@ -53,11 +51,11 @@ const NavBar = () => {
                 <nav className="nav-bar">
                     <ul>
                         <li><a>Events</a></li>
-                        <li><a>About</a></li>
-                        <li><a className="contact">Contact Us</a></li>
+                        <li><a href="#aboutUs">About</a></li>
+                        <li><a href="#contactUs" className="contact">Contact Us</a></li>
                     </ul>
                 </nav>
-								<Button className="join" text="JOIN" onClick={onClickTest} />
+								<Button className="join" text="JOIN" onClick={joinLink} />
                 <div className="mobile_hamburger_menu">
                     <img src={Hamburger} id="mobile_hamburger_img" onClick={() =>{
 											toggleMobileMenu('open_menu')}}>       

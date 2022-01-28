@@ -13,7 +13,7 @@ const AboutUs = () => {
 
 
 	return (
-		<div className="AboutUs">
+		<div id="aboutUs" className="AboutUs">
 
 			<div className="au-grid">
 

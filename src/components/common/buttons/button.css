@@ -17,6 +17,11 @@
 	margin: 10px auto;
 }
 
+.Button a {
+	text-decoration: none;
+	color: white;
+}
+
 .Button:hover {
 	cursor: pointer;
 }
