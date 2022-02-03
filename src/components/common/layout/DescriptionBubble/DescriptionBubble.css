@@ -1,10 +1,10 @@
 .DescriptionBubble {
 	padding: 30px;
 	text-align: left;
-	background: rgba(255, 255, 255, 0.9) 0 0 no-repeat padding-box;
+	background: rgb(255, 255, 255) 0 0 no-repeat padding-box;
 	box-shadow: 0 3px 6px #00000029;
 	border-radius: 43px;
-	opacity: 1;
+	/* opacity: 1; */
 	margin: 10px 0;
 }
 .descriptionTitle {

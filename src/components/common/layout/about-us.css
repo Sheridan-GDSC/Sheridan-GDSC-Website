@@ -22,13 +22,6 @@
 	top: 40px;
 	left: 70px;
 }
-#redLoops {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	z-index: -10;
-}
 
 #branchLeaves {
 	max-width: 80%;
@@ -40,29 +33,44 @@
 	position: absolute;
 	bottom: -185px;
 	right: -130px;
-	z-index: -1;
+	z-index: -5;
+}
+
+#yellowIcon {
+	width: 800px;
+	position: absolute;
+	bottom: 100px;
+	left: -400px;
+	z-index: -2;
 }
 
 .au-grid {
 	display: grid;
 	width: 80%;
 	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'extraDetail info';
+	gap: 70px;
 	margin: 0 auto;
 	position: relative;
 }
 #info {
 	position: relative;
+	grid-area: info;
 	justify-content: space-between;
 }
-#extraDetail,
-#info {
-	padding: 0 15px;
+
+#redLoops {
+	position: absolute;
+	height: 100%;
+	right: 20%;
+	z-index: -10;
 }
 
 #extraDetail {
-	padding: 50px 15px;
+	padding: 10px;
 	display: flex;
 	align-items: center;
+	grid-area: extraDetail;
 }
 
 #extraDetail .dbContainer {
@@ -146,12 +154,6 @@
 			'info'
 			'extraDetail';
 	}
-	#info {
-		grid-area: info;
-	}
-	#extraDetail {
-		grid-area: extraDetail;
-	}
 	.au-heading {
 		font-size: 1.5rem;
 		text-align: left;
@@ -174,5 +176,14 @@
 		width: 100px;
 		bottom: -60px;
 		right: -35px;
+	}
+	#yellowIcon {
+		width: 500px;
+		bottom: 330px;
+		left: -180px;
+	}
+	#redLoops {
+		height: 110%;
+		right: 2%;
 	}
 }

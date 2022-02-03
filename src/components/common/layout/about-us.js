@@ -1,11 +1,13 @@
 import React from "react";
 import Stat from "./stat/stat"
 import GCircle from "../../../../static/images/green_circle.png"
+import YCircle from "../../../../static/images/yellow_circle.svg"
 import BranchLeaves from "../../../../static/images/branch-leaves.png"
 import ManPointing from "../../../../static/images/man_pointing.svg"
 import WomanHoldingCard from "../../../../static/images/woman_holding_card.svg"
 import MainMegaphone from "../../../../static/images/man_megaphone.svg"
 import Clouds from "../../../../static/images/clouds.svg"
+import RedLoops from "../../../../static/images/red_loops.png"
 import "./about-us.css"
 import DescriptionBubble from "./DescriptionBubble/DescriptionBubble";
 
@@ -14,9 +16,7 @@ const AboutUs = () => {
 
 	return (
 		<div id="aboutUs" className="AboutUs">
-
 			<div className="au-grid">
-
 				<div id="extraDetail">
 					<div className="dbContainer">
 						<div id="dbImgContainer1">
@@ -33,13 +33,17 @@ const AboutUs = () => {
 						<img id="dbImg3" src={MainMegaphone} alt={"Man holding megaphone"}/>
 						<DescriptionBubble id="db3" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
 					</div>
+					<img id="yellowIcon" alt="yellow circle" src={YCircle} />
 				</div>
+
+
 
 				<div id="info">
 					<h1 className="au-heading">
 						About Us
 						<div id="au-underline"></div>
 					</h1>
+					<img id="redLoops" alt="red loops background" src={RedLoops} />
 
 					<h2 id="subtitle">Preaesent mattis metus sit amet <span className="green">justo mattis.</span></h2>
 					<p id="au-blurb">Ex suscipit distinctio quidem, maiores optio vitae quas blanditiis ab ipsum temporibus omnis dolor fugiat inventore harum obcaecati possimus unde ut quaerat mollitia minus repellendus. Omnis dolorum suscipit vitae blanditiis, voluptatum dignissimos, tempore quo sint earum facilis id unde officia ab adipisci maiores explicabo perspiciatis modi nam corporis sit laborum? Officiis aut tempore accusantium voluptatibus, molestias libero facilis, quibusdam cum omnis numquam laudantium tenetur repellendus sequi, voluptatum doloremque temporibus illo illum tempora fugiat.</p>
