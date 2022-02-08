@@ -32,6 +32,26 @@ module.exports = {
           `poppins\:300,400,400i,700`
         ],
       }
-    }
+    },{
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingId: [
+          "G-D9C960VDH8", // Google Analytics Tracking ID
+        ],
+        gtagConfig: {
+          // anonymize user IP, required by law in some countries
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+      },
+      pluginConfig: {
+        // determines if tracking script is found in head or body
+        head: false,
+        // toggle tracking users with "Do Not Track" enabled
+        respectDNT: true,
+        // avoids sending pageview hits from custom paths
+        exclude: [],
+      },
+    },
   ],
 };
