@@ -1,18 +1,17 @@
 import React from "react";
 import Stat from "./stat/stat"
-import GCircle from "../../../../static/images/green_circle.png"
-import YCircle from "../../../../static/images/yellow_circle.svg"
-import BranchLeaves from "../../../../static/images/branch-leaves.png"
-import ManPointing from "../../../../static/images/man_pointing.svg"
-import WomanHoldingCard from "../../../../static/images/woman_holding_card.svg"
-import MainMegaphone from "../../../../static/images/man_megaphone.svg"
-import Clouds from "../../../../static/images/clouds.svg"
-import RedLoops from "../../../../static/images/red_loops.png"
+import GCircle from "../../../../../static/images/green_circle.png"
+import YCircle from "../../../../../static/images/yellow_circle.svg"
+import BranchLeaves from "../../../../../static/images/branch-leaves.png"
+import ManPointing from "../../../../../static/images/man_pointing.svg"
+import WomanHoldingCard from "../../../../../static/images/woman_holding_card.svg"
+import MainMegaphone from "../../../../../static/images/man_megaphone.svg"
+import Clouds from "../../../../../static/images/clouds.svg"
+import RedLoops from "../../../../../static/images/red_loops.png"
 import "./about-us.css"
-import DescriptionBubble from "./DescriptionBubble/DescriptionBubble";
+import DescriptionBubble from "../DescriptionBubble/DescriptionBubble";
 
 const AboutUs = () => {
-
 
 	return (
 		<div id="aboutUs" className="AboutUs">

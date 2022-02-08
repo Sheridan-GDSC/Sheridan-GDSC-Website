@@ -1,5 +1,5 @@
 import React from "react";
-import "../layout/list.js";
+import "../layout/navbar/list.js";
 import "./text_input.css"
 
 const TextArea = ({fieldName, isRequired}) => {

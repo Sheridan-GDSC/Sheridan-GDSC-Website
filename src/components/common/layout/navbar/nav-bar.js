@@ -1,13 +1,15 @@
 import React from "react"
 import { useState } from "react"
-import Icon from "../../../../static/images/icon.png"
-import Hamburger from "../../../../public/images/hamburger_menu.png"
 import "./NavBar.css"
-import Cancel from "../../../../public/images/icn_Cancel.png"
-import WhiteLogo from "../../../../public/images/white_logo.png"
-import Socials from "./social/socials"
+
+import Icon from "../../../../../static/images/icon.png"
+import Hamburger from "../../../../../static/images/hamburger_menu.png"
+import Cancel from "../../../../../static/images/icn_Cancel.png"
+import WhiteLogo from "../../../../../static/images/white_logo.png"
+
+import Socials from "../social/socials"
 import List from "./list.js"
-import Button from "../buttons/button"
+import Button from "../../buttons/button"
 
 const NavBar = () => {
 
