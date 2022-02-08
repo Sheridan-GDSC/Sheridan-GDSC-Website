@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+body {
+	margin: 0px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+:root {
+	--main-font: 'Poppins', sans-serif;
+}

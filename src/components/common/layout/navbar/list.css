@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+.list {
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	width: 55vw;
+	text-align: left;
+}
+
+.listItemUL {
+	padding-left: 20px;
+	margin: 3px;
+}
+
+.listItemLI {
+	text-decoration: none;
+	list-style-type: none;
+	font-size: 13px;
+	border-bottom: rgba(255, 255, 255, 0.3) solid 1px;
+	height: 57px;
+	line-height: 57px;
+	width: 100%;
+}

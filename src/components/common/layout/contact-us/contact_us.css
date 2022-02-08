@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+.cu > * {
+	margin: 0px;
+}
+
+.cu {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	overflow: hidden;
+	padding: 0px 0px 150px;
+}
+
+.cu-heading {
+	font-size: 2rem;
+	color: #4892eb;
+	padding-top: 50px;
+	margin: 0px auto;
+	width: 300px;
+	position: relative;
+}
+
+#cu-underline {
+	height: 2px;
+	width: 250px;
+	position: absolute;
+	background-color: #4892eb;
+	top: 105px;
+	left: 120px;
+}
+
+.cu-desc {
+	width: 45%;
+	margin: 40px auto 125px;
+	font-size: 1rem;
+	color: #797d81;
+}
+
+#gCircleIcon {
+	width: 300px;
+	position: absolute;
+	top: -115px;
+	right: -130px;
+	z-index: -1;
+}
+
+#blueBack {
+	height: 45%;
+	width: 100%;
+	background-color: rgba(90, 139, 234, 0.08);
+	position: absolute;
+	top: 0px;
+	left: 0;
+	z-index: -1;
+}
+
+@media screen and (max-width: 865px) {
+	.cu-desc {
+		font-size: 0.8rem;
+	}
+	#cu-underline {
+		width: 200px;
+	}
+	#gCircleIcon {
+		width: 100px;
+		top: -40px;
+		right: -35px;
+	}
+}

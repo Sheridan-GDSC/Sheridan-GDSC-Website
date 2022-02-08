@@ -1,0 +1,189 @@
+.AboutUs {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	overflow: hidden;
+	color: #797d81;
+	line-height: 1.8rem;
+}
+
+.au-heading {
+	font-size: 2rem;
+	color: #419c49;
+	width: 300px;
+	position: relative;
+}
+
+#au-underline {
+	height: 3px;
+	width: 250px;
+	position: absolute;
+	background-color: #419c49;
+	top: 40px;
+	left: 70px;
+}
+
+#branchLeaves {
+	max-width: 80%;
+	margin: 50px auto;
+}
+
+#greenIcon {
+	width: 300px;
+	position: absolute;
+	bottom: -185px;
+	right: -130px;
+	z-index: -5;
+}
+
+#yellowIcon {
+	width: 800px;
+	position: absolute;
+	bottom: 100px;
+	left: -400px;
+	z-index: -2;
+}
+
+.au-grid {
+	display: grid;
+	width: 80%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'extraDetail info';
+	gap: 70px;
+	margin: 0 auto;
+	position: relative;
+}
+#info {
+	position: relative;
+	grid-area: info;
+	justify-content: space-between;
+}
+
+#redLoops {
+	position: absolute;
+	height: 100%;
+	right: 20%;
+	z-index: -10;
+}
+
+#extraDetail {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	grid-area: extraDetail;
+}
+
+#extraDetail .dbContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	height: 85%;
+	position: relative;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 #dbImgClouds {
+	max-height: 84%;
+	position: absolute;
+	top: -6%;
+	left: -100%;
+	z-index: -1;
+}
+
+#extraDetail .dbContainer #dbImgContainer1 #dbImg1 {
+	/*max-height: 84%;*/
+	height: 100%;
+	position: relative;
+	top: 22.5%;
+	left: 10%;
+}
+
+#extraDetail .dbContainer #dbImg2 {
+	height: 84%;
+	position: relative;
+	top: 20%;
+	left: -26px;
+}
+
+#extraDetail .dbContainer #dbImg3 {
+	height: 85%;
+	position: relative;
+	top: 20%;
+	left: -15%;
+}
+
+#au-blurb {
+	margin: 0px auto 20px;
+}
+.green {
+	color: #419c49;
+}
+
+#subtitle {
+	margin: 20px 0;
+}
+
+.au-grid div {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#statContainer {
+	width: 90%;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30px 10px 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media screen and (max-width: 865px) {
+	.AboutUs {
+		font-size: 0.9rem;
+	}
+	.au-grid {
+		width: 90%;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'info'
+			'extraDetail';
+	}
+	.au-heading {
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	#subtitle {
+		font-size: 1rem;
+	}
+	#au-underline {
+		width: 200px;
+		left: 50px;
+	}
+	#statContainer {
+		width: 100%;
+		padding: 10px 0;
+	}
+	#branchLeaves {
+		max-width: 75%;
+	}
+	#greenIcon {
+		width: 100px;
+		bottom: -60px;
+		right: -35px;
+	}
+	#yellowIcon {
+		width: 500px;
+		bottom: 330px;
+		left: -180px;
+	}
+	#redLoops {
+		height: 110%;
+		right: 2%;
+	}
+}

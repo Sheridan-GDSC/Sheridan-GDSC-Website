@@ -1,0 +1,11 @@
+.div-socials {
+    display: flex;
+    gap: 4px;
+    margin-top: 44px;
+    margin-left: 11px;
+}
+
+.img-socials {
+    height: 27px;
+    margin: 5px;
+}

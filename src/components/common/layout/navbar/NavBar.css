@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+.nav-bar-header {
+	font-family: var(--main-font);
+	font-size: 0.8rem;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 0;
+}
+
+.nav-bar ul li a {
+	text-decoration: none;
+	color: #6f6f6f;
+}
+
+/* Change names */
+
+.nav-bar-header {
+	position: sticky;
+	z-index: 100;
+}
+
+.outerDiv {
+	/* padding: 15px; */
+	display: grid;
+	grid-template-columns: 8fr 6fr 4fr;
+	gap: 10px;
+	background-color: white;
+	margin: 0px;
+	padding: 14px;
+	/* position: sticky; */
+}
+
+.outerDiv > * {
+	background-color: white;
+}
+
+.outerDiv img {
+	width: 60px;
+}
+
+.icon {
+	grid-column: 1/2;
+	margin: auto 13%;
+}
+
+.nav-bar {
+	grid-column: 2/3;
+	font-size: 20px;
+}
+
+.nav-bar ul {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+
+.nav-bar li {
+	margin: 5px;
+	list-style-type: none;
+	color: #6f6f6f;
+}
+
+.nav-bar a:hover {
+	cursor: pointer;
+}
+
+/* .nav-bar li:hover {
+    border-bottom: solid #6f6f6f 2px;
+} */
+
+.mobile_hamburger_menu {
+	display: none;
+}
+
+.hidden_menu {
+	display: none;
+}
+
+@media screen and (max-width: 865px) {
+	.icon {
+		margin-left: 25px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.outerDiv {
+		height: 80px;
+	}
+
+	.mobile_hamburger_menu {
+		grid-column: 3/4;
+		grid-row: 1/2;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.mobile_hamburger_menu img {
+		margin: auto;
+		width: 50px;
+	}
+
+	.nav-bar ul,
+	.join {
+		display: none;
+	}
+
+	.hidden_menu {
+		flex-direction: column;
+		position: absolute;
+		top: 0px;
+		z-index: 1;
+		padding: 16px;
+		background-color: #5a8bea;
+		height: calc(100vh - 32px);
+		margin-right: 0px;
+		width: 57%;
+	}
+
+	#menu_appear {
+		animation: slide-in 0.5s forwards;
+	}
+
+	#menu_disappear {
+		animation: slide-out 0.5s forwards;
+	}
+
+	@keyframes slide-in {
+		0% {
+			right: -100%;
+		}
+		100% {
+			right: 0;
+		}
+	}
+
+	@keyframes slide-out {
+		0% {
+			right: 0;
+		}
+		100% {
+			right: -100%;
+		}
+	}
+
+	#cancel_icn img {
+		width: 25px;
+		margin: 14px;
+	}
+
+	#sher_brand_icn {
+		margin-top: 27px;
+		margin-bottom: 18px;
+		height: 50px;
+	}
+
+	#sher_brand_icn img {
+		width: 40px;
+		margin-right: 27px;
+		margin-left: 10px;
+	}
+
+	#sher_brand_icn label {
+		color: white;
+		text-align: center;
+		font-size: 25px;
+		font-family: var(--main-font);
+	}
+
+	#no-style {
+		display: none;
+	}
+}

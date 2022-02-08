@@ -13,20 +13,26 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./static/images/",
+        name: 'images',
+        path: `${__dirname}/static/images`,
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
-      __key: "pages",
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `open sans\:300,400,400i,700`,
+          `poppins\:300,400,400i,700`
+        ],
+      }
+    },{
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingId: [
