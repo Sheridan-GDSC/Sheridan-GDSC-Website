@@ -11,11 +11,8 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem","gatsby-plugin-google-gtag",
+      resolve: "gatsby-source-filesystem",
       options: {
-        trackingId: "G-D9C960VDH8", // Google Analytics
-        head = true;
-        anonymize: true,
         name: "images",
         path: "./static/images/",
       },
@@ -28,6 +25,27 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingId: [
+          "G-D9C960VDH8", // Google Analytics Tracking ID
+        ],
+        gtagConfig: {
+          // anonymize user IP, required by law in some countries
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+      },
+      pluginConfig: {
+        // determines if tracking script is found in head or body
+        head: false,
+        // toggle tracking users with "Do Not Track" enabled
+        respectDNT: true,
+        // avoids sending pageview hits from custom paths
+        exclude: [],
+      },
     },
   ],
 };
