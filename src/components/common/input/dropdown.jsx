@@ -1,5 +1,5 @@
 import React from "react";
-import "../layout/navbar/list.js";
+import "../layout/navbar/list.jsx";
 import "./text_input.css"
 const Dropdown = ({fieldName, options}) => {
 

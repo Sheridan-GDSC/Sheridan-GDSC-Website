@@ -8,7 +8,7 @@ import Cancel from "../../../../../static/images/icn_Cancel.png"
 import WhiteLogo from "../../../../../static/images/white_logo.png"
 
 import Socials from "../social/socials"
-import List from "./list.js"
+import List from "./list.jsx"
 import Button from "../../buttons/button"
 
 const NavBar = () => {

@@ -1,6 +1,6 @@
 import React from "react"
 import "./contact_us.css"
-import Form from "../form/contact-us-form.js"
+import Form from "../form/contact-us-form.jsx"
 import GCircle from "../../../../../static/images/green_circle.png"
 
 const ContactUs = () => {

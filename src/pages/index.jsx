@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import NavBar from "../components/common/layout/navbar/nav-bar.js"
-import ContactUs from "../components/common/layout/contact-us/contact_us.js"
-import AboutUs from "../components/common/layout/about-us/about-us.js"
+import NavBar from "../components/common/layout/navbar/nav-bar.jsx"
+import ContactUs from "../components/common/layout/contact-us/contact_us.jsx"
+import AboutUs from "../components/common/layout/about-us/about-us.jsx"
 import "./index.css"
 import Landing from "../components/common/layout/landing/Landing.jsx";
 
