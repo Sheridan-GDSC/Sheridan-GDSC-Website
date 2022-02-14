@@ -1,12 +1,13 @@
 import React from "react"
-import "./stat.css"
+import {StatContainer, StatNumber, StatName} from "./StatStyles";
+
 
 const Stat = (props) => {
 return(
-	<div className="Stat">
-		<p className="statNumber">{props.number}</p>
-		<p className="statName">{props.name}</p>
-	</div>
+	<StatContainer>
+		<StatNumber>{props.number}</StatNumber>
+		<StatName>{props.name}</StatName>
+	</StatContainer>
 );
 }
 
