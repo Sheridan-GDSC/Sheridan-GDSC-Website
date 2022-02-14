@@ -1,13 +1,14 @@
 import React from 'react';
-import "./DescriptionBubble.css"
+import {Container, DescriptionTitle, DescriptionText} from "./DescriptionBubbleStyles";
+
 
 const DescriptionBubble = (props) => {
 
 	return(
-		<div id={props.id} className="DescriptionBubble">
-			<h3 className="descriptionTitle">{props.title}</h3>
-			<p className="descriptionText">{props.text}</p>
-		</div>
+		<Container id={props.id}>
+			<DescriptionTitle>{props.title}</DescriptionTitle>
+			<DescriptionText>{props.text}</DescriptionText>
+		</Container>
 	);
 
 }
