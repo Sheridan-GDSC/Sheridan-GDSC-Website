@@ -3,7 +3,7 @@ import Twitter from "../../../../../public/images/twitter_icon.png"
 import Instagram from "../../../../../public/images/insta_icon.png"
 import LinkedIn from "../../../../../public/images/linkedin_icon.png"
 import YouTube from "../../../../../public/images/youtube_icon.png"
-import "./socials.css"
+import {SocialContainer, SocialIcon} from "./SocialsStyles"
 
 const Socials = () => {
 
@@ -27,16 +27,16 @@ const Socials = () => {
     ]
 
     return (
-        <div className="div-socials">
+        <SocialContainer className="div-socials">
             {
                 social_media.map((item, id ) => 
                     <a target="_blank" key={id} href={item.link} className="sa-socials">
-                     <img src={item.image} className="img-socials"></img>
+                     <SocialIcon src={item.image} className="img-socials"></SocialIcon>
                     </a>
                 )
             }
             
-        </div>
+        </SocialContainer>
     )
 }
 
