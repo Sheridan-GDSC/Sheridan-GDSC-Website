@@ -1,20 +1,21 @@
 import React from "react";
 import "../layout/navbar/list.jsx";
-import "./text_input.css"
+import { TextInputContainer, DropDown, TextInputLabel } from "./TextInputStyles.jsx";
+
+
 const Dropdown = ({fieldName, options}) => {
 
   return (
-    <div className="div-TI">
-      <label className="ti-lbl" name={fieldName}>{fieldName}</label>
-      <select className="ti-input" id={fieldName} name={fieldName}>
+    <TextInputContainer>
+      <TextInputLabel name={fieldName}>{fieldName}</TextInputLabel>
+      <DropDown id={fieldName} name={fieldName}>
         {
           options.map(option => 
             <option key={option} value={option}>{option}</option>
           )
         }
-      </select>
-      
-    </div>
+      </DropDown>  
+    </TextInputContainer>
   )
 }
 

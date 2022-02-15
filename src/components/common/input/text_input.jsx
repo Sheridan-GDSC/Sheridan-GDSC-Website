@@ -1,22 +1,21 @@
 import React from "react"
-import "./text_input.css"
+import { TextInputContainer, TextInputLabel, InputField, Asterisk } from "./TextInputStyles"
 
 
 const TextInput = ({id, fieldName, isRequired}) => {
 
     return (
-        <div id={id} className="div-TI">
-            <label htmlFor={fieldName} className="ti-lbl">{fieldName}
-
+        <TextInputContainer id={id}>
+            <TextInputLabel htmlFor={fieldName}>{fieldName}
                 {
                     isRequired ?
-                     <span>*</span>
+                     <Asterisk>*</Asterisk>
                      :
                      ""
                 }
-            </label>
-            <input type="text" id={fieldName} name={fieldName} className="ti-input"></input>
-        </div>
+            </TextInputLabel>
+            <InputField type="text" id={fieldName} name={fieldName}></InputField>
+        </TextInputContainer>
     ) 
 }
 
