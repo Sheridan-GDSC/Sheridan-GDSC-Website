@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+import styled from "styled-components"
 
-.list {
+
+export const ListContainer = styled.div 	`
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 	font-family: 'Poppins', sans-serif;
 	color: white;
 	width: 55vw;
 	text-align: left;
-}
+`
 
-.listItemUL {
+export const Lister = styled.ul `
 	padding-left: 20px;
 	margin: 3px;
-}
+`
 
-.listItemLI {
+export const ListItem = styled.li `
 	text-decoration: none;
 	list-style-type: none;
 	font-size: 13px;
@@ -20,4 +22,4 @@
 	height: 57px;
 	line-height: 57px;
 	width: 100%;
-}
+`

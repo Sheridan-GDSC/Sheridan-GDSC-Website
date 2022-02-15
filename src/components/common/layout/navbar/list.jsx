@@ -1,5 +1,5 @@
 import React from "react";
-import "./list.css";
+import { ListContainer, Lister, ListItem } from "./ListStyles";
 
 const List = () => {
     const listItems = [
@@ -22,17 +22,17 @@ const List = () => {
     ];
 
     return (
-            <div className="list">
-                <ul className="listItemUL">
+            <ListContainer>
+                <Lister>
                 {
                     listItems.map(item =>
-                        <li key={item.source} className="listItemLI">
+                        <ListItem key={item.source}>
                             <a src={item.source}>{item.label}</a>
-                        </li>
+                        </ListItem>
                     )
                 }
-                </ul>
-            </div>
+                </Lister>
+            </ListContainer>
     )
 }
 
