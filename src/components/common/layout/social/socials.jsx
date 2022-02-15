@@ -27,15 +27,14 @@ const Socials = () => {
     ]
 
     return (
-        <SocialContainer className="div-socials">
+        <SocialContainer>
             {
                 social_media.map((item, id ) => 
-                    <a target="_blank" key={id} href={item.link} className="sa-socials">
-                     <SocialIcon src={item.image} className="img-socials"></SocialIcon>
+                    <a target="_blank" key={id} href={item.link}>
+                     <SocialIcon src={item.image}></SocialIcon>
                     </a>
                 )
             }
-            
         </SocialContainer>
     )
 }
