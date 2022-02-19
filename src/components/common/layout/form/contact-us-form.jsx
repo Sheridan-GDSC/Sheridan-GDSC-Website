@@ -15,39 +15,39 @@ import Clouds from "../../../../../static/images/clouds.png"
 
 
 const ContactUsForm = () => {
-    const options = ["1","2", "3"]
+  const options = ["1", "2", "3"]
 
-		const formSubmit = () => {
-			console.log('submit form');
+  const formSubmit = () => {
+    console.log('submit form');
 
-		}
+  }
 
-    return (
-        <div className="contact_us_form_div">
-					<div className="personalInputs">
-            <TextInput id="firstName" fieldName="First Name: " isRequired="true" />
-            <TextInput id="lastName" fieldName="Last Name: " isRequired="true" />
-            <TextInput id="email" fieldName="Email: " isRequired="true" />
-            <Dropdown id="subject"
-                fieldName="Select a Subject: " 
-                isRequired="false"
-                options={options}
-            />
-					</div>
-          
-            <TextArea id="message" fieldName="Message: " isRequired="true" />
-						<Button id="submit" text="Submit" onClick={formSubmit}/>
+  return (
+    <div className="contact_us_form_div">
+      <div className="personalInputs">
+        <TextInput id="firstName" fieldName="First Name: " isRequired="true" />
+        <TextInput id="lastName" fieldName="Last Name: " isRequired="true" />
+        <TextInput id="email" fieldName="Email: " isRequired="true" />
+        <Dropdown id="subject"
+          fieldName="Select a Subject: "
+          isRequired="false"
+          options={options}
+        />
+      </div>
 
-              <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
-              <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />	
-              <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
-              <img id="womanBottom" className="icons" alt="cartoon woman carrying a picture" src={WomanBottom} />
-              <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
-              <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
-              <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
-							<img alt="clouds" src={Clouds} id="clouds" />
-        </div>
-    )
+      <TextArea id="message" fieldName="Message: " isRequired="true" />
+      <Button id="submit" text="Submit" onClick={formSubmit} />
+
+      <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
+      <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />
+      <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
+      <img id="womanBottom" className="icons" alt="cartoon woman carrying a frame" src={WomanBottom} />
+      <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
+      <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
+      <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
+      <img alt="clouds" src={Clouds} id="clouds" />
+    </div>
+  )
 }
 
 export default ContactUsForm

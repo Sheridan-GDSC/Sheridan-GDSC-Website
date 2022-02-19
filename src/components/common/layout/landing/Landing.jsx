@@ -24,6 +24,10 @@ import EventCard from "../../EventCard";
 
 const Landing = () => {
 
+  const date = new Date();
+  const parsedDate = date.getDay();
+  console.log(parsedDate.toString());
+
   const data = useStaticQuery(graphql`
     query {
       bg: file(name: { eq: "Background" }, extension: { eq: "png" }) {
@@ -57,7 +61,7 @@ const Landing = () => {
   `);
 
   return (
-    <div>
+    <div id="landing">
 
       <LandingBackground>
         <GatsbyImage

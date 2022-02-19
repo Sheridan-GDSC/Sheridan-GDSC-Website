@@ -1,38 +1,38 @@
 import React from "react";
-import { ListContainer, Lister, ListItem } from "./ListStyles";
+import { LinkItem, ListContainer, Lister, ListItem } from "./ListStyles";
 
 const List = () => {
     const listItems = [
         {
             label: "Home",
-            source: '/'
+            source: '#landing'
         },
-        {
-            label: "Events",
-            source: '/events'
-        },
+        // {
+        //     label: "Events",
+        //     source: '/events'
+        // },
         {
             label: "About",
-            source: '/about'
+            source: '#aboutUs'
         },
         {
             label: "Contact Us",
-            source: '/contact'
+            source: '#contactUs'
         }
     ];
 
     return (
-            <ListContainer>
-                <Lister>
+        <ListContainer>
+            <Lister>
                 {
                     listItems.map(item =>
                         <ListItem key={item.source}>
-                            <a src={item.source}>{item.label}</a>
+                            <LinkItem href={item.source}>{item.label}</LinkItem>
                         </ListItem>
                     )
                 }
-                </Lister>
-            </ListContainer>
+            </Lister>
+        </ListContainer>
     )
 }
 

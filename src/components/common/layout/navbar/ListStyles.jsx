@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export const ListContainer = styled.div 	`
+export const ListContainer = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 	font-family: 'Poppins', sans-serif;
 	color: white;
@@ -9,12 +9,16 @@ export const ListContainer = styled.div 	`
 	text-align: left;
 `
 
-export const Lister = styled.ul `
+export const Lister = styled.ul`
 	padding-left: 20px;
 	margin: 3px;
 `
+export const LinkItem = styled.a`
+	text-decoration: none;
+	color: inherit;
+`
 
-export const ListItem = styled.li `
+export const ListItem = styled.li`
 	text-decoration: none;
 	list-style-type: none;
 	font-size: 13px;
