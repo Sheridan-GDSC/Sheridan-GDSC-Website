@@ -27,9 +27,11 @@ const Landing = () => {
   const date = new Date();
   const activeDate = date.getDate();
   const month = date.toLocaleString('default', { month: 'long' });;
+  const startingDay =
+    new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
-  date.setDate(1);
-  const firstDayOfMonth = date.getDay();
+  const monthLength =
+    new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
   const data = useStaticQuery(graphql`
     query {
@@ -88,7 +90,7 @@ const Landing = () => {
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month={month} activeDate={activeDate} startingDay={firstDayOfMonth} />
+                <Calendar month={month} activeDate={activeDate} startingDay={startingDay} monthLength={monthLength} />
                 <VStack>
                   <SmallEventCard
                     title="Tech Interview 101"
@@ -102,7 +104,7 @@ const Landing = () => {
                 </VStack>
               </HStack>
               <EventCard
-                title="Create Series - Introduction to GoLang \& APIs"
+                title="Create Series - Introduction to GoLang & APIs"
                 date="Oct 21, 2021"
               />
             </VStack>

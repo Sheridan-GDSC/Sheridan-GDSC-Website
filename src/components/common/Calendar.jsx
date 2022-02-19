@@ -50,6 +50,7 @@ const Calendar = ({
   activeDate = 0,
   startingDay = 0,
   maxDate = 31,
+  monthLength = 0
 }) => {
   let dates = [];
   let offset = 0;
@@ -57,7 +58,7 @@ const Calendar = ({
     dates.push(null);
     offset++;
   }
-  for (let i = 1; i <= maxDate; i++) {
+  for (let i = 1; i <= monthLength; i++) {
     dates.push(i.toString());
   }
   let rows = [];
@@ -94,13 +95,13 @@ const Calendar = ({
         <CalendarTitle>{month}</CalendarTitle>
         <CalendarTable>
           <CalendarTableHead>
+            <th>SUN</th>
             <th>MON</th>
             <th>TUE</th>
             <th>WED</th>
             <th>THU</th>
             <th>FRI</th>
             <th>SAT</th>
-            <th>SUN</th>
           </CalendarTableHead>
           <CalendarTableBody>
             {rows.map((row, i) => (
