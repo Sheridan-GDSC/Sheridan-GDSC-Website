@@ -25,8 +25,11 @@ import EventCard from "../../EventCard";
 const Landing = () => {
 
   const date = new Date();
-  const parsedDate = date.getDay();
-  console.log(parsedDate.toString());
+  const activeDate = date.getDate();
+  const month = date.toLocaleString('default', { month: 'long' });;
+
+  date.setDate(1);
+  const firstDayOfMonth = date.getDay();
 
   const data = useStaticQuery(graphql`
     query {
@@ -85,7 +88,7 @@ const Landing = () => {
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month="October" activeDate={4} startingDay={4} />
+                <Calendar month={month} activeDate={activeDate} startingDay={firstDayOfMonth} />
                 <VStack>
                   <SmallEventCard
                     title="Tech Interview 101"
@@ -99,7 +102,7 @@ const Landing = () => {
                 </VStack>
               </HStack>
               <EventCard
-                title="Create Series - Introduction to GoLang & APIs"
+                title="Create Series - Introduction to GoLang \& APIs"
                 date="Oct 21, 2021"
               />
             </VStack>
