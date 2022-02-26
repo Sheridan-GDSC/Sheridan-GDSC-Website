@@ -21,9 +21,9 @@ import HStack from "../HStack";
 import VStack from "../VStack";
 import SmallEventCard from "../../SmallEventCard";
 import EventCard from "../../EventCard";
+import EventCardTemplate from "../../../../templates/EventCardTemplate";
 
 const Landing = () => {
-
   const data = useStaticQuery(graphql`
     query {
       bg: file(name: { eq: "Background" }, extension: { eq: "png" }) {
@@ -58,11 +58,10 @@ const Landing = () => {
 
   return (
     <div>
-
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
-        // objectFit="cover"
+          // objectFit="cover"
         />
       </LandingBackground>
       <LandingLayout>
@@ -83,11 +82,7 @@ const Landing = () => {
               <HStack>
                 <Calendar month="October" activeDate={4} startingDay={4} />
                 <VStack>
-                  <SmallEventCard
-                    title="Tech Interview 101"
-                    date="Oct 7, 2021"
-                    color="#5EAD65"
-                  />
+                  <EventCardTemplate />
                   <SmallEventCard
                     title="Android Study Jam"
                     date="Oct 17, 2021"
@@ -117,7 +112,7 @@ const Landing = () => {
         </ForeImgMobile>
       </LandingForeground>
     </div>
-  )
-}
+  );
+};
 
 export default Landing;

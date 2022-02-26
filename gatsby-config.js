@@ -10,29 +10,35 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/static/images`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
+        name: `event-cards`,
+        path: `${__dirname}/src/event-cards/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
         path: `${__dirname}/src/pages`,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `open sans\:300,400,400i,700`,
-          `poppins\:300,400,400i,700`
-        ],
-      }
-    },{
+        fonts: [`open sans\:300,400,400i,700`, `poppins\:300,400,400i,700`],
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingId: [
