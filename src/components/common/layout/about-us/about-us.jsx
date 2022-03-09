@@ -22,15 +22,15 @@ const AboutUs = () => {
 							<img id="dbImg1" src={ManPointing} alt={"Man pointing"}/>
 							<img id="dbImgClouds" src={Clouds} alt={"Clouds"}/>
 						</div>
-						<DescriptionBubble style={{maxWidth: '446px'}} id="db1" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble maxWidth="446px" id="db1" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
 					</div>
 					<div className="dbContainer">
-						<DescriptionBubble style={{maxWidth: '522px'}} id="db2" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble maxWidth="522px" id="db2" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
 						<img id="dbImg2" src={WomanHoldingCard} alt={"Woman holding card"}/>
 					</div>
 					<div className="dbContainer">
 						<img id="dbImg3" src={MainMegaphone} alt={"Man holding megaphone"}/>
-						<DescriptionBubble style={{maxWidth: '460px'}} id="db3" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble maxWidth="460px" id="db3" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
 					</div>
 					<img id="yellowIcon" alt="yellow circle" src={YCircle} />
 				</div>
