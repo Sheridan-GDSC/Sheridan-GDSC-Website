@@ -24,6 +24,15 @@ import EventCard from "../../EventCard";
 
 const Landing = () => {
 
+  const date = new Date();
+  const activeDate = date.getDate();
+  const month = date.toLocaleString('default', { month: 'long' });;
+  const startingDay =
+    new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+
+  const monthLength =
+    new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+
   const data = useStaticQuery(graphql`
     query {
       bg: file(name: { eq: "Background" }, extension: { eq: "png" }) {
@@ -57,7 +66,7 @@ const Landing = () => {
   `);
 
   return (
-    <div>
+    <div id="landing">
 
       <LandingBackground>
         <GatsbyImage
@@ -81,7 +90,7 @@ const Landing = () => {
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month="October" activeDate={4} startingDay={4} />
+                <Calendar month={month} activeDate={activeDate} startingDay={startingDay} monthLength={monthLength} />
                 <VStack>
                   <SmallEventCard
                     title="Tech Interview 101"

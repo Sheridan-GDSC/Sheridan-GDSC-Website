@@ -1,26 +1,26 @@
 import React from "react";
-import "../layout/navbar/list.js";
-import "./text_input.css"
+import "../layout/navbar/list.jsx";
+import { TextAreaContainer, TextAreaInput, TextInputLabel } from "./TextInputStyles.jsx";
+
 
 const TextArea = ({fieldName, isRequired}) => {
 
   return (
-    <div className="div-TI ta-div">
-      <label className="ti-lbl" htmlFor={fieldName}>{fieldName}
+    <TextAreaContainer>
+      <TextInputLabel htmlFor={fieldName}>{fieldName}
 					{
 						isRequired ?
 							<span>*</span>
 							:
 							""
 				}
-			</label>
-      <textarea 
-				className="ti-input text-area"
+			</TextInputLabel>
+      <TextAreaInput 
         id={fieldName}
         name={fieldName}
         rows="10" cols="30"
       />
-    </div>
+    </TextAreaContainer>
   )
 }
 
