@@ -1,23 +1,36 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import SmallEventCard from "../components/common/SmallEventCard";
 
-export default function EventCardTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const event = data.markdownRemark;
-  return <SmallEventCard event={event} color="#5a8bea" />;
+export default function EventCardTemplate() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query ($slug: String!) {
+          markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+            html
+            frontmatter {
+              date
+              slug
+              title
+            }
+          }
+        }
+      `}
+      render={(data) => <SmallEventCard event={data} color="#5a8bea" />}
+    ></StaticQuery>
+  );
 }
 
-export const eventCardQuery = graphql`
-  query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
-        title
-      }
-    }
-  }
-`;
+// export const eventCardQuery = graphql`
+//   query ($slug: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         date
+//         slug
+//         title
+//       }
+//     }
+//   }
+// `;

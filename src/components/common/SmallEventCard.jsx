@@ -49,6 +49,7 @@ const Button = styled.button`
 const Link = styled.a``;
 
 const SmallEventCard = ({ event, color }) => {
+  console.log(event);
   return (
     <Card color={color}>
       <Date>{event.frontmatter.date}</Date>
