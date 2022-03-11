@@ -2,7 +2,7 @@ import React from "react";
 import "../layout/navbar/list.js";
 import "./text_input.css"
 
-const TextArea = ({fieldName, isRequired}) => {
+const TextArea = ({id, fieldName, isRequired}) => {
 
   return (
     <div className="div-TI ta-div">
@@ -16,8 +16,8 @@ const TextArea = ({fieldName, isRequired}) => {
 			</label>
       <textarea 
 				className="ti-input text-area"
-        id={fieldName}
-        name={fieldName}
+        id={id}
+        name={id}
         rows="10" cols="30"
       />
     </div>

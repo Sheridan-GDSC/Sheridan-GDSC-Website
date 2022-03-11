@@ -12,42 +12,73 @@ import SmallGear from "../../../../../static/images/small_gear.png"
 import LargeGear from "../../../../../static/images/large_gear.png"
 import LargeYlwGear from "../../../../../static/images/large_yellow_gear.png"
 import Clouds from "../../../../../static/images/clouds.png"
+import fetch from "node-fetch"
+import ReCAPTCHA from "react-google-recaptcha"
 
 
 const ContactUsForm = () => {
-    const options = ["1","2", "3"]
+  const options = ["1","2", "3"]
+  const recaptchaRef = React.createRef()
 
-		const formSubmit = () => {
-			console.log('submit form');
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
 
-		}
+    // Get recaptcha value
+    const recaptchaValue = recaptchaRef.current.getValue()
+    
+    // Submit form if recaptcha is valid
+    if (recaptchaValue) {
+      let formData = new FormData();
+      const form = e.currentTarget.elements;
+      console.log(form)
+  
+      for (let i = 0; i < form.length; i++) {
+        formData.append(form[i].name, form[i].value);
+      }
+  
+      fetch("https://getform.io/f/704521a0-1281-4406-bd97-8d3c7561e22b", {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => console.log(response))
+      .catch(error => console.log(error))
+    } else {
+      console.log("ReCAPTCHA not verified. Please try again.")
+    }
+  }
 
-    return (
-        <div className="contact_us_form_div">
-					<div className="personalInputs">
-            <TextInput id="firstName" fieldName="First Name: " isRequired="true" />
-            <TextInput id="lastName" fieldName="Last Name: " isRequired="true" />
-            <TextInput id="email" fieldName="Email: " isRequired="true" />
-            <Dropdown id="subject"
-                fieldName="Select a Subject: " 
-                isRequired="false"
-                options={options}
-            />
-					</div>
-          
-            <TextArea id="message" fieldName="Message: " isRequired="true" />
-						<Button id="submit" text="Submit" onClick={formSubmit}/>
-
-              <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
-              <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />	
-              <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
-              <img id="womanBottom" className="icons" alt="cartoon woman carrying a picture" src={WomanBottom} />
-              <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
-              <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
-              <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
-							<img alt="clouds" src={Clouds} id="clouds" />
+  return (
+      <form className="contact_us_form_div" onSubmit={handleOnSubmit}>
+        <div className="personalInputs">
+          <TextInput id="firstName" fieldName="First Name: " isRequired="true" />
+          <TextInput id="lastName" fieldName="Last Name: " isRequired="true" />
+          <TextInput id="email" fieldName="Email: " isRequired="true" />
+          <Dropdown id="subject"
+              fieldName="Select a Subject: " 
+              isRequired="false"
+              options={options}
+          />
         </div>
-    )
+        
+        <TextArea id="message" fieldName="Message: " isRequired="true" />
+
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey="6LfH6s0eAAAAALzYmSPr4bbJymQeEH18dOhA1GWp"
+          onChange={() => console.log("Captcha verified")}
+        />
+
+        <Button text="Submit" type="submit"/>
+        <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
+        <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />	
+        <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
+        <img id="womanBottom" className="icons" alt="cartoon woman carrying a picture" src={WomanBottom} />
+        <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
+        <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
+        <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
+        <img alt="clouds" src={Clouds} id="clouds" />
+      </form>
+  )
 }
 
 export default ContactUsForm

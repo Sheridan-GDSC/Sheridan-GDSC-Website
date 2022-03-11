@@ -3,11 +3,9 @@ import "./text_input.css"
 
 
 const TextInput = ({id, fieldName, isRequired}) => {
-
     return (
         <div id={id} className="div-TI">
             <label htmlFor={fieldName} className="ti-lbl">{fieldName}
-
                 {
                     isRequired ?
                      <span>*</span>
@@ -15,7 +13,7 @@ const TextInput = ({id, fieldName, isRequired}) => {
                      ""
                 }
             </label>
-            <input type="text" id={fieldName} name={fieldName} className="ti-input"></input>
+            <input type="text" id={id} name={id} className="ti-input"></input>
         </div>
     ) 
 }
