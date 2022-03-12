@@ -14,7 +14,7 @@ const TextInput = ({id, fieldName, isRequired}) => {
                      ""
                 }
             </TextInputLabel>
-            <InputField type="text" id={fieldName} name={fieldName}></InputField>
+            <InputField type="text" id={id} name={id}></InputField>
         </TextInputContainer>
     ) 
 }

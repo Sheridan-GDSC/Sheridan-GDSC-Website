@@ -1,6 +1,6 @@
 import React from "react";
 import "../layout/navbar/list.jsx";
-import { TextAreaContainer, TextAreaInput, TextInputLabel } from "./TextInputStyles.jsx";
+import { Asterisk, TextAreaContainer, TextAreaInput, TextInputLabel } from "./TextInputStyles.jsx";
 
 
 const TextArea = ({fieldName, isRequired}) => {
@@ -10,7 +10,7 @@ const TextArea = ({fieldName, isRequired}) => {
       <TextInputLabel htmlFor={fieldName}>{fieldName}
 					{
 						isRequired ?
-							<span>*</span>
+              <Asterisk>*</Asterisk>
 							:
 							""
 				}
