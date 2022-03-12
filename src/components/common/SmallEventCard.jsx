@@ -44,6 +44,7 @@ const Button = styled.button`
   color: ${(props) => props.color};
   justify-self: flex-end;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 const SmallEventCard = ({
@@ -52,11 +53,17 @@ const SmallEventCard = ({
   url = "",
   color = "#5a8bea",
 }) => {
+  const goToURL = () => {
+    window.open(url, "_blank");
+  };
+
+
+
   return (
     <Card color={color}>
       <Date>{date}</Date>
       <Title>{title}</Title>
-      <Button color={color} onClick={url}>
+      <Button color={color} onClick={() => goToURL(url)}>
         DETAILS
       </Button>
     </Card>
