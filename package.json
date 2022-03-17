@@ -28,8 +28,10 @@
     "gatsby-plugin-styled-components": "^4.14.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
+    "node-fetch": "^2.6.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.1"
   }

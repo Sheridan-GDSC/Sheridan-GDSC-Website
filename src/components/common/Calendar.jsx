@@ -95,13 +95,15 @@ const Calendar = ({
         <CalendarTitle>{month}</CalendarTitle>
         <CalendarTable>
           <CalendarTableHead>
-            <th>SUN</th>
-            <th>MON</th>
-            <th>TUE</th>
-            <th>WED</th>
-            <th>THU</th>
-            <th>FRI</th>
-            <th>SAT</th>
+            <tr>
+              <th>SUN</th>
+              <th>MON</th>
+              <th>TUE</th>
+              <th>WED</th>
+              <th>THU</th>
+              <th>FRI</th>
+              <th>SAT</th>
+            </tr>
           </CalendarTableHead>
           <CalendarTableBody>
             {rows.map((row, i) => (

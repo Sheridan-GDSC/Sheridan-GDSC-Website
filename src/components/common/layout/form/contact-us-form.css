@@ -25,7 +25,7 @@
 		'message message'
 		'submit submit';
 }
-#firstName {
+/* #firstName {
 	grid-area: fn;
 }
 #lastName {
@@ -39,7 +39,7 @@
 }
 #message {
 	grid-area: message;
-}
+} */
 #submit {
 	grid-area: submit;
 }
