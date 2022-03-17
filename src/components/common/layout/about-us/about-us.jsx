@@ -52,7 +52,7 @@ const AboutUs = () => {
 					<h2 id="subtitle">Preaesent mattis metus sit amet <span className="green">justo mattis.</span></h2>
 					<p id="au-blurb">{ about.main.first }</p>
 					<p id="au-blurb">{ about.main.second }</p>
-					<p id="au-blurb" dangerouslySetInnerHTML={createDiscordLinkParagraph}></p>
+					<p id="au-blurb" dangerouslySetInnerHTML={createDiscordLinkParagraph()}></p>
 					<div id="statContainer">
 						<Stat number="56" name="Projects" />
 						<Stat number="128" name="Members" />
