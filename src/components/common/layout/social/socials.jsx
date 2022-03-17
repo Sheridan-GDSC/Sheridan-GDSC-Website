@@ -1,8 +1,8 @@
 import React from "react";
-import Twitter from "../../../../../public/images/twitter_icon.png"
-import Instagram from "../../../../../public/images/insta_icon.png"
-import LinkedIn from "../../../../../public/images/linkedin_icon.png"
-import YouTube from "../../../../../public/images/youtube_icon.png"
+import Twitter from "/static/images/twitter_icon.png"
+import Instagram from "/static/images/insta_icon.png"
+import LinkedIn from "/static/images/linkedin_icon.png"
+import YouTube from "/static/images/youtube_icon.png"
 import { SocialContainer, SocialIcon } from "./SocialsStyles"
 
 const Socials = () => {
