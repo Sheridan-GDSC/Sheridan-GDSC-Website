@@ -21,8 +21,11 @@ import HStack from "../HStack";
 import VStack from "../VStack";
 import SmallEventCard from "../../SmallEventCard";
 import EventCard from "../../EventCard";
+import { content } from "../../../../services/content";
 
 const Landing = () => {
+
+  const { landing } = content
 
   const date = new Date();
   const activeDate = date.getDate();
@@ -81,9 +84,7 @@ const Landing = () => {
             <Title>Sheridan</Title>
             <Subtitle>Developer Student Club</Subtitle>
             <Content>
-              Developer Student Clubs (DSC) is a program presented by Google
-              developers. Students from all Sheridan programs with an interest
-              in growing as a developer are welcome!
+              { landing.main }
             </Content>
             <CTAButton>General Member Application</CTAButton>
           </ContentLeft>
