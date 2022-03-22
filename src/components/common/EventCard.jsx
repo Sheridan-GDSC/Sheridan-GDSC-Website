@@ -47,12 +47,12 @@ const Button = styled.button`
   margin-top: 10px;
 `;
 
-const EventCard = ({ title = "", date = "", url = "" }) => {
+const EventCard = ({ url = "", event }) => {
   return (
     <Card>
-      <Date>{date}</Date>
-      <Title>{title}</Title>
-      <Button onClick={url}>DETAILS</Button>
+      <Date>{event.node.frontmatter.date}</Date>
+      <Title>{event.node.frontmatter.title}</Title>
+      <Button onClick={event.node.frontmatter.url}>DETAILS</Button>
     </Card>
   );
 };

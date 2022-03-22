@@ -46,17 +46,13 @@ const Button = styled.button`
   margin-top: 10px;
 `;
 
-const Link = styled.a``;
-
 const SmallEventCard = ({ event, color }) => {
   console.log(event);
   return (
     <Card color={color}>
-      <Date>{event.frontmatter.date}</Date>
-      <Title>{event.frontmatter.title}</Title>
-      <Button color={color} onClick={event.frontmatter.slug}>
-        <Link target="_blank">DETAILS</Link>
-      </Button>
+      <Date>{event.node.frontmatter.date}</Date>
+      <Title>{event.node.frontmatter.title}</Title>
+      <Button color={color} onClick={event.node.frontmatter.url}></Button>
     </Card>
   );
 };

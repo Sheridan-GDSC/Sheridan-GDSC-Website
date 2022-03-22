@@ -21,11 +21,26 @@ import HStack from "../HStack";
 import VStack from "../VStack";
 import SmallEventCard from "../../SmallEventCard";
 import EventCard from "../../EventCard";
-import EventCardTemplate from "../../../../templates/EventCardTemplate";
 
 const Landing = () => {
   const data = useStaticQuery(graphql`
     query {
+      events: allMarkdownRemark(
+        sort: { order: ASC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 250)
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              slug
+              title
+              url
+            }
+          }
+        }
+      }
       bg: file(name: { eq: "Background" }, extension: { eq: "png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -55,13 +70,14 @@ const Landing = () => {
       }
     }
   `);
-
+  console.log(data.events);
+  const { edges } = data.events;
   return (
     <div>
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
-          // objectFit="cover"
+          objectFit="cover"
         />
       </LandingBackground>
       <LandingLayout>
@@ -82,17 +98,11 @@ const Landing = () => {
               <HStack>
                 <Calendar month="October" activeDate={4} startingDay={4} />
                 <VStack>
-                  <EventCardTemplate />
-                  <SmallEventCard
-                    title="Android Study Jam"
-                    date="Oct 17, 2021"
-                  />
+                  <SmallEventCard event={edges[2]} color="#5EAD65" />
+                  <SmallEventCard event={edges[1]} color="#5a8bea" />
                 </VStack>
               </HStack>
-              <EventCard
-                title="Create Series - Introduction to GoLang & APIs"
-                date="Oct 21, 2021"
-              />
+              <EventCard event={edges[0]} />
             </VStack>
           </ContentRight>
         </LandingPadding>
