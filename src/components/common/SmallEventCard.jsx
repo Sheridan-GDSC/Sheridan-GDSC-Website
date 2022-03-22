@@ -52,7 +52,9 @@ const SmallEventCard = ({ event, color }) => {
     <Card color={color}>
       <Date>{event.node.frontmatter.date}</Date>
       <Title>{event.node.frontmatter.title}</Title>
-      <Button color={color} onClick={event.node.frontmatter.url}></Button>
+      <Button color={color} onClick={event.node.frontmatter.url}>
+        DETAILS
+      </Button>
     </Card>
   );
 };
