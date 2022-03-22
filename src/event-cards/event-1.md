@@ -1,6 +1,6 @@
 ---
-slug: "event-1"
-date: "2019-05-04"
-title: "Event 1"
-url: ""
+slug: "event-2022-03-25"
+date: "2022-03-25"
+title: "Java and OOP Series"
+url: "https://gdsc.community.dev/events/details/developer-student-clubs-sheridan-college-trafalgar-road-campus-oakville-presents-java-oop-series/"
 ---

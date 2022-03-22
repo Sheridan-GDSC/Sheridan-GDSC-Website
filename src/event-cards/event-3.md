@@ -1,6 +1,6 @@
 ---
-slug: "event-3"
-date: "2019-05-06"
-title: "Event 3"
-url: ""
+slug: "event-2022-03-27"
+date: "2022-03-27"
+title: "Build a Kanban Issue Tracker - Part 2"
+url: "https://gdsc.community.dev/events/details/developer-student-clubs-sheridan-college-trafalgar-road-campus-oakville-presents-build-a-kanban-issue-tracker-part_2/"
 ---
