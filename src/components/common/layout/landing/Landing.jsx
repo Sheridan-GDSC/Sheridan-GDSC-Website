@@ -24,17 +24,18 @@ import EventCard from "../../EventCard";
 import { content } from "../../../../services/content";
 
 const Landing = () => {
-
-  const { landing } = content
+  const { landing } = content;
 
   const date = new Date();
   const activeDate = date.getDate();
-  const month = date.toLocaleString('default', { month: 'long' });;
-  const startingDay =
-    new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+  const month = date.toLocaleString("default", { month: "long" });
+  const startingDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
-  const monthLength =
-    new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  const monthLength = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDate();
 
   const data = useStaticQuery(graphql`
     query {
@@ -87,11 +88,10 @@ const Landing = () => {
   const { edges } = data.events;
   return (
     <div id="landing">
-
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
-          objectFit="cover"
+          // objectFit="cover"
         />
       </LandingBackground>
       <LandingLayout>
@@ -100,15 +100,18 @@ const Landing = () => {
           <ContentLeft>
             <Title>Sheridan</Title>
             <Subtitle>Developer Student Club</Subtitle>
-            <Content>
-              { landing.main }
-            </Content>
+            <Content>{landing.main}</Content>
             <CTAButton>General Member Application</CTAButton>
           </ContentLeft>
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month={month} activeDate={activeDate} startingDay={startingDay} monthLength={monthLength} />
+                <Calendar
+                  month={month}
+                  activeDate={activeDate}
+                  startingDay={startingDay}
+                  monthLength={monthLength}
+                />
                 <VStack>
                   <SmallEventCard event={edges[2]} color="#5EAD65" />
                   <SmallEventCard event={edges[1]} color="#5a8bea" />
