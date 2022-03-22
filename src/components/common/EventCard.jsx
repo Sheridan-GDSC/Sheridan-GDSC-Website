@@ -50,15 +50,16 @@ const Button = styled.button`
 
 const EventCard = ({ event }) => {
   const goToURL = () => {
-    window.open(url, "_blank");
+    window.open(event.node.frontmatter.url, "_blank");
   };
-
 
   return (
     <Card>
       <Date>{event.node.frontmatter.date}</Date>
       <Title>{event.node.frontmatter.title}</Title>
-      <Button onClick={() => goToURL(event.node.frontmatter.url)}>DETAILS</Button>
+      <Button onClick={() => goToURL(event.node.frontmatter.url)}>
+        DETAILS
+      </Button>
     </Card>
   );
 };

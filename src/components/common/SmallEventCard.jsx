@@ -47,14 +47,11 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const SmallEventCard = ({
-  event,
-  color = "#5a8bea",
-}) => {
+const SmallEventCard = ({ event, color = "#5a8bea" }) => {
   const goToURL = () => {
-    window.open(url, "_blank");
+    window.open(event.node.frontmatter.url, "_blank");
   };
-  
+
   return (
     <Card color={color}>
       <Date>{event.node.frontmatter.date}</Date>
