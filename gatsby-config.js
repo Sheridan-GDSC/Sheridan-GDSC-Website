@@ -33,6 +33,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'content',
+        path: `${__dirname}/src/services`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`open sans\:300,400,400i,700`, `poppins\:300,400,400i,700`],
@@ -41,7 +48,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: [
+        trackingIds: [
           "G-D9C960VDH8", // Google Analytics Tracking ID
         ],
         gtagConfig: {

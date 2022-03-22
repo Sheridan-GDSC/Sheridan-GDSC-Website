@@ -1,9 +1,9 @@
 import React from "react";
-import Twitter from "../../../../../public/images/twitter_icon.png"
-import Instagram from "../../../../../public/images/insta_icon.png"
-import LinkedIn from "../../../../../public/images/linkedin_icon.png"
-import YouTube from "../../../../../public/images/youtube_icon.png"
-import "./socials.css"
+import Twitter from "/static/images/twitter_icon.png"
+import Instagram from "/static/images/insta_icon.png"
+import LinkedIn from "/static/images/linkedin_icon.png"
+import YouTube from "/static/images/youtube_icon.png"
+import { SocialContainer, SocialIcon } from "./SocialsStyles"
 
 const Socials = () => {
 
@@ -23,20 +23,19 @@ const Socials = () => {
         image: LinkedIn,
         link: "https://www.linkedin.com/company/google-dsc-sheridan-college"
     }
-			// maybe discord too??
+        // maybe discord too??
     ]
 
     return (
-        <div className="div-socials">
+        <SocialContainer>
             {
-                social_media.map((item, id ) => 
-                    <a target="_blank" key={id} href={item.link} className="sa-socials">
-                     <img src={item.image} className="img-socials"></img>
+                social_media.map((item, id) =>
+                    <a target="_blank" key={id} href={item.link} rel="noreferrer noopener">
+                        <SocialIcon src={item.image}></SocialIcon>
                     </a>
                 )
             }
-            
-        </div>
+        </SocialContainer>
     )
 }
 

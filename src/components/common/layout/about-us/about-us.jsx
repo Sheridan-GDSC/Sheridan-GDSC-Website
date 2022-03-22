@@ -10,8 +10,15 @@ import Clouds from "../../../../../static/images/clouds.svg"
 import RedLoops from "../../../../../static/images/red_loops.png"
 import "./about-us.css"
 import DescriptionBubble from "../DescriptionBubble/DescriptionBubble";
+import { content } from "../../../../services/content";
 
 const AboutUs = () => {
+
+	const { about } = content
+
+	function createDiscordLinkParagraph() {
+		return {__html: about.main.third};
+	}
 
 	return (
 		<div id="aboutUs" className="AboutUs">
@@ -22,20 +29,18 @@ const AboutUs = () => {
 							<img id="dbImg1" src={ManPointing} alt={"Man pointing"}/>
 							<img id="dbImgClouds" src={Clouds} alt={"Clouds"}/>
 						</div>
-						<DescriptionBubble id="db1" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble style={{maxWidth: '446px'}} id="db1" title={ about.bubbleOne.title } text={ about.bubbleOne.main } />
 					</div>
 					<div className="dbContainer">
-						<DescriptionBubble id="db2" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble style={{maxWidth: '522px'}} id="db2" title={ about.bubbleTwo.title } text={ about.bubbleTwo.main } />
 						<img id="dbImg2" src={WomanHoldingCard} alt={"Woman holding card"}/>
 					</div>
 					<div className="dbContainer">
 						<img id="dbImg3" src={MainMegaphone} alt={"Man holding megaphone"}/>
-						<DescriptionBubble id="db3" title="Title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolorem? Quos quod alias sunt ut laboriosam omnis a, sapiente veritatis." />
+						<DescriptionBubble style={{maxWidth: '460px'}} id="db3" title={ about.bubbleThree.title } text={ about.bubbleThree.main } />
 					</div>
 					<img id="yellowIcon" alt="yellow circle" src={YCircle} />
 				</div>
-
-
 
 				<div id="info">
 					<h1 className="au-heading">
@@ -45,7 +50,9 @@ const AboutUs = () => {
 					<img id="redLoops" alt="red loops background" src={RedLoops} />
 
 					<h2 id="subtitle">Preaesent mattis metus sit amet <span className="green">justo mattis.</span></h2>
-					<p id="au-blurb">Ex suscipit distinctio quidem, maiores optio vitae quas blanditiis ab ipsum temporibus omnis dolor fugiat inventore harum obcaecati possimus unde ut quaerat mollitia minus repellendus. Omnis dolorum suscipit vitae blanditiis, voluptatum dignissimos, tempore quo sint earum facilis id unde officia ab adipisci maiores explicabo perspiciatis modi nam corporis sit laborum? Officiis aut tempore accusantium voluptatibus, molestias libero facilis, quibusdam cum omnis numquam laudantium tenetur repellendus sequi, voluptatum doloremque temporibus illo illum tempora fugiat.</p>
+					<p id="au-blurb">{ about.main.first }</p>
+					<p id="au-blurb">{ about.main.second }</p>
+					<p id="au-blurb" dangerouslySetInnerHTML={createDiscordLinkParagraph()}></p>
 					<div id="statContainer">
 						<Stat number="56" name="Projects" />
 						<Stat number="128" name="Members" />

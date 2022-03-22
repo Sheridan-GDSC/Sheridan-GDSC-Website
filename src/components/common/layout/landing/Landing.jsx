@@ -21,8 +21,21 @@ import HStack from "../HStack";
 import VStack from "../VStack";
 import SmallEventCard from "../../SmallEventCard";
 import EventCard from "../../EventCard";
+import { content } from "../../../../services/content";
 
 const Landing = () => {
+
+  const { landing } = content
+
+  const date = new Date();
+  const activeDate = date.getDate();
+  const month = date.toLocaleString('default', { month: 'long' });;
+  const startingDay =
+    new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+
+  const monthLength =
+    new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+
   const data = useStaticQuery(graphql`
     query {
       events: allMarkdownRemark(
@@ -73,7 +86,8 @@ const Landing = () => {
   console.log(data.events);
   const { edges } = data.events;
   return (
-    <div>
+    <div id="landing">
+
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
@@ -87,16 +101,14 @@ const Landing = () => {
             <Title>Sheridan</Title>
             <Subtitle>Developer Student Club</Subtitle>
             <Content>
-              Developer Student Clubs (DSC) is a program presented by Google
-              developers. Students from all Sheridan programs with an interest
-              in growing as a developer are welcome!
+              { landing.main }
             </Content>
             <CTAButton>General Member Application</CTAButton>
           </ContentLeft>
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month="October" activeDate={4} startingDay={4} />
+                <Calendar month={month} activeDate={activeDate} startingDay={startingDay} monthLength={monthLength} />
                 <VStack>
                   <SmallEventCard event={edges[2]} color="#5EAD65" />
                   <SmallEventCard event={edges[1]} color="#5a8bea" />

@@ -45,14 +45,20 @@ const Button = styled.button`
   color: #fff;
   justify-self: flex-end;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
-const EventCard = ({ url = "", event }) => {
+const EventCard = ({ event }) => {
+  const goToURL = () => {
+    window.open(url, "_blank");
+  };
+
+
   return (
     <Card>
       <Date>{event.node.frontmatter.date}</Date>
       <Title>{event.node.frontmatter.title}</Title>
-      <Button onClick={event.node.frontmatter.url}>DETAILS</Button>
+      <Button onClick={() => goToURL(event.node.frontmatter.url)}>DETAILS</Button>
     </Card>
   );
 };
