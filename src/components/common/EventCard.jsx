@@ -48,19 +48,18 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-
-
-const EventCard = ({ title = "", date = "", url = "" }) => {
+const EventCard = ({ event }) => {
   const goToURL = () => {
-    window.open(url, "_blank");
+    window.open(event.node.frontmatter.url, "_blank");
   };
-
 
   return (
     <Card>
-      <Date>{date}</Date>
-      <Title>{title}</Title>
-      <Button onClick={() => goToURL(url)}>DETAILS</Button>
+      <Date>{event.node.frontmatter.date}</Date>
+      <Title>{event.node.frontmatter.title}</Title>
+      <Button onClick={() => goToURL(event.node.frontmatter.url)}>
+        DETAILS
+      </Button>
     </Card>
   );
 };
