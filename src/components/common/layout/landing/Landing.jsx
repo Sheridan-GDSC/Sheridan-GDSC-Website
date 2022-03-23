@@ -24,20 +24,37 @@ import EventCard from "../../EventCard";
 import { content } from "../../../../services/content";
 
 const Landing = () => {
-
-  const { landing } = content
+  const { landing } = content;
 
   const date = new Date();
   const activeDate = date.getDate();
-  const month = date.toLocaleString('default', { month: 'long' });;
-  const startingDay =
-    new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+  const month = date.toLocaleString("default", { month: "long" });
+  const startingDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
-  const monthLength =
-    new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  const monthLength = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDate();
 
   const data = useStaticQuery(graphql`
     query {
+      events: allMarkdownRemark(
+        sort: { order: ASC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            id
+            excerpt(pruneLength: 250)
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              slug
+              title
+              url
+            }
+          }
+        }
+      }
       bg: file(name: { eq: "Background" }, extension: { eq: "png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -67,14 +84,14 @@ const Landing = () => {
       }
     }
   `);
-
+  console.log(data.events);
+  const { edges } = data.events;
   return (
     <div id="landing">
-
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
-        // objectFit="cover"
+          // objectFit="cover"
         />
       </LandingBackground>
       <LandingLayout>
@@ -83,31 +100,24 @@ const Landing = () => {
           <ContentLeft>
             <Title>Sheridan</Title>
             <Subtitle>Developer Student Club</Subtitle>
-            <Content>
-              { landing.main }
-            </Content>
+            <Content>{landing.main}</Content>
             <CTAButton>General Member Application</CTAButton>
           </ContentLeft>
           <ContentRight>
             <VStack>
               <HStack>
-                <Calendar month={month} activeDate={activeDate} startingDay={startingDay} monthLength={monthLength} />
+                <Calendar
+                  month={month}
+                  activeDate={activeDate}
+                  startingDay={startingDay}
+                  monthLength={monthLength}
+                />
                 <VStack>
-                  <SmallEventCard
-                    title="Tech Interview 101"
-                    date="Oct 7, 2021"
-                    color="#5EAD65"
-                  />
-                  <SmallEventCard
-                    title="Android Study Jam"
-                    date="Oct 17, 2021"
-                  />
+                  <SmallEventCard event={edges[2]} color="#5EAD65" />
+                  <SmallEventCard event={edges[1]} color="#5a8bea" />
                 </VStack>
               </HStack>
-              <EventCard
-                title="Create Series - Introduction to GoLang & APIs"
-                date="Oct 21, 2021"
-              />
+              <EventCard event={edges[0]} />
             </VStack>
           </ContentRight>
         </LandingPadding>
@@ -127,7 +137,7 @@ const Landing = () => {
         </ForeImgMobile>
       </LandingForeground>
     </div>
-  )
-}
+  );
+};
 
 export default Landing;
