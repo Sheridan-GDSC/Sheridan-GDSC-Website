@@ -5,7 +5,7 @@ import {Container, DescriptionTitle, DescriptionText} from "./DescriptionBubbleS
 const DescriptionBubble = (props) => {
 
 	return(
-		<Container id={props.id}>
+		<Container maxWidth={props.maxWidth} id={props.id}>
 			<DescriptionTitle>{props.title}</DescriptionTitle>
 			<DescriptionText>{props.text}</DescriptionText>
 		</Container>

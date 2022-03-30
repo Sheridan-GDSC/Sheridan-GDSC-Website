@@ -7,13 +7,16 @@ export const Container = styled.div `
 	box-shadow: 0 3px 6px #00000029;
 	border-radius: 43px;
 	margin: 10px 0;
+
+	// calc accounts for padding of 30 on each side
+	max-width: calc(${(props) => props.maxWidth} - (30px * 2))
+
 `;
 
 export const DescriptionTitle = styled.h3 `
 	font-size: 32px;
 	color: #419c49;
 	margin: 10px 0 20px;
-
 	@media (max-width: 768px) {
 		font-size: 18px;
 	}
