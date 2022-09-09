@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "SheridanGDSC",
-  "author": "Andres Munevar",
+  "author": "Google Developer Student Club Sheridan College",
   "keywords": [
     "gatsby"
   ],
@@ -26,6 +26,7 @@
     "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-plugin-styled-components": "^5.10.0",
+    "gatsby-transformer-remark": "^5.8.0",
     "gatsby-source-filesystem": "^4.10.0",
     "gatsby-transformer-sharp": "^4.10.0",
     "node-fetch": "^2.6.7",
