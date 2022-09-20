@@ -123,12 +123,12 @@ const Landing = () => {
         </LandingPadding>
       </LandingLayout>
       <LandingForeground>
-        <ForeImg>
+        {/* <ForeImg>
           <GatsbyImage
             image={data.fg.childImageSharp.gatsbyImageData}
             objectFit="fit"
           />
-        </ForeImg>
+        </ForeImg> */}
         <ForeImgMobile>
           <GatsbyImage
             image={data.fgm.childImageSharp.gatsbyImageData}
