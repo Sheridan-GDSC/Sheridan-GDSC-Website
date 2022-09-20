@@ -42,7 +42,7 @@ const NavBar = () => {
 
     // }
 
-    const joinLink = "https://gdsc.community.dev/sheridan-college-trafalgar-road-campus-oakville/"
+    const joinLink = "https://gdsc.community.dev/sheridan-college-trafalgar-road-campus/"
 
     return (
         <header className="nav-bar-header">
@@ -57,7 +57,7 @@ const NavBar = () => {
                         <li><a href="#contactUs" className="contact">Contact Us</a></li>
                     </ul>
                 </nav>
-                <Button className="join" text="JOIN" onClick={joinLink} />
+                <Button className="join" text="JOIN" onClick={() =>window.open(joinLink, "_blank")} />
                 <div className="mobile_hamburger_menu">
                     <button className="hamburger_menu_button"
                         onClick={() => { toggleMobileMenu('open_menu') }}
@@ -85,7 +85,7 @@ const NavBar = () => {
                 </div>
                 <div id="sher_brand_icn">
                     <img src={WhiteLogo} alt="html tag"></img>
-                    <label>Sheridan</label>
+                    <span>Sheridan</span>
                 </div>
                 <List></List>
                 <Socials></Socials>

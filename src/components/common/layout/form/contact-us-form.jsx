@@ -72,7 +72,7 @@ const ContactUsForm = () => {
         <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
         <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />	
         <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
-        <img id="womanBottom" className="icons" alt="cartoon woman carrying a picture" src={WomanBottom} />
+        <img id="womanBottom" className="icons" alt="cartoon woman carrying a polaroid" src={WomanBottom} />
         <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
         <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
         <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />

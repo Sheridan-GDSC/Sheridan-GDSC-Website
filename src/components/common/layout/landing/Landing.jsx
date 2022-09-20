@@ -12,8 +12,7 @@ import LandingLayout, {
   Title,
   Subtitle,
   Content,
-  CTAButton,
-  ForeImg,
+  // CTAButton,
   ForeImgMobile,
 } from "./LandingStyles";
 import Calendar from "../../Calendar";
@@ -91,6 +90,7 @@ const Landing = () => {
       <LandingBackground>
         <GatsbyImage
           image={data.bg.childImageSharp.gatsbyImageData}
+          alt="landing page background (presentational)"
           // objectFit="cover"
         />
       </LandingBackground>
@@ -101,7 +101,7 @@ const Landing = () => {
             <Title>Sheridan</Title>
             <Subtitle>Developer Student Club</Subtitle>
             <Content>{landing.main}</Content>
-            <CTAButton>General Member Application</CTAButton>
+            {/* <CTAButton>General Member Application</CTAButton> */}
           </ContentLeft>
           <ContentRight>
             <VStack>
@@ -131,6 +131,7 @@ const Landing = () => {
         </ForeImg> */}
         <ForeImgMobile>
           <GatsbyImage
+          alt="man and woman pointing"
             image={data.fgm.childImageSharp.gatsbyImageData}
             objectFit="fit"
           />
