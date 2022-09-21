@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.sheridangdsc.ca",
     title: "SheridanGDSC",
   },
   plugins: [
@@ -11,6 +11,19 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "standalone",
+        icon: "static/images/icon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

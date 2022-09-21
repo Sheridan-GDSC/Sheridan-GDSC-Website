@@ -17,7 +17,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 
 
 const ContactUsForm = () => {
-  const options = ["1","2", "3"]
+  const options = ["collaboration","Executive Team", "Other"]
   const recaptchaRef = React.createRef()
 
   const handleOnSubmit = async (e) => {
@@ -36,7 +36,7 @@ const ContactUsForm = () => {
         formData.append(form[i].name, form[i].value);
       }
   
-      fetch("https://getform.io/f/704521a0-1281-4406-bd97-8d3c7561e22b", {
+      fetch("https://getform.io/f/e1351c0b-e0c7-433c-85f1-7d5f3e4c57d8", {
         method: "POST",
         body: formData,
       })
@@ -72,7 +72,7 @@ const ContactUsForm = () => {
         <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
         <img id="manTop" className="icons" alt="cartoon man pointing downward" src={ManTop} />	
         <img id="manBottom" className="icons" alt="cartoon man holding a large pencil" src={ManBottom} />
-        <img id="womanBottom" className="icons" alt="cartoon woman carrying a picture" src={WomanBottom} />
+        <img id="womanBottom" className="icons" alt="cartoon woman carrying a polaroid" src={WomanBottom} />
         <img id="small_gear" className="icons" alt="small gear icon" src={SmallGear} />
         <img id="large_gear" className="icons" alt="large gear icon" src={LargeGear} />
         <img id="large_ylw_gear" className="icons" alt="large yellow gear icon" src={LargeYlwGear} />
