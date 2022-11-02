@@ -10,3 +10,7 @@ html {
 :root {
 	--main-font: 'Poppins', sans-serif;
 }
+
+* {
+	box-sizing: border-box;
+}

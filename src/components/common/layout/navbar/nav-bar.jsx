@@ -48,11 +48,10 @@ const NavBar = () => {
         <header className="nav-bar-header">
             <div className="outerDiv">
                 <div className="icon">
-                    <img src={Icon} alt="html tag with google colors"></img>
+                    <a href="/"><img src={Icon} alt="html tag with google colors"></img></a>
                 </div>
                 <nav className="nav-bar">
                     <ul>
-                        {/* <li><a href="/">Events</a></li> Not required yet*/}
                         <li><a href="#aboutUs">About</a></li>
                         <li><a href="#contactUs" className="contact">Contact Us</a></li>
                     </ul>
