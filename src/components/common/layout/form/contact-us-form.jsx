@@ -62,11 +62,13 @@ const ContactUsForm = () => {
         
         <TextArea id="message" fieldName="Message: " isRequired="true" />
 
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey="6LfH6s0eAAAAALzYmSPr4bbJymQeEH18dOhA1GWp"
-          onChange={() => console.log("Captcha verified")}
-        />
+        <div id="recaptcha">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6LfH6s0eAAAAALzYmSPr4bbJymQeEH18dOhA1GWp"
+            onChange={() => console.log("Captcha verified")}
+          />
+        </div>
 
         <Button text="Submit" type="submit"/>
         <img id="womanTop" className="icons" alt="cartoon girl typing on computer" src={WomanTop} />
