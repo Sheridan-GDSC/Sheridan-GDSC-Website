@@ -90,6 +90,13 @@
 	left: -160px;
 	z-index: -1;
 }
+
+#recaptcha {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
 @media screen and (max-width: 865px) {
 	.personalInputs {
 		grid-template-columns: 1fr;
